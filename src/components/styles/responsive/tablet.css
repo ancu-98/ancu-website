@@ -1,0 +1,44 @@
+
+@media (max-width: 768px) {
+
+    /* NavBar Component - tablet */
+
+    .navBar__container-setup {
+        gap: 10px;
+    }
+
+    .button__item {
+        width: 7em;
+        margin: 0px;
+    }
+
+    .button__item .item span {
+        margin: 2px;
+        font-size: 1.3rem ;
+    }
+
+    .proyects .item span {
+        margin: 0px;
+        margin-left: 2px;
+    }
+
+    .proyects .item img {
+        margin: 4px;
+    }
+
+    .button__item .item img {
+        height: 1.4em;
+        margin: 2px;
+    }
+
+    /* - tablet */
+
+
+}
+
+
+
+
+
+
+
