@@ -33,7 +33,7 @@ const NavBar = ({handleTab}) => {
                 </button>
                 <label className='switch'>
                     <input type="checkbox" />
-                    <span className='slider'></span>
+                    <span className='slider_nav'></span>
                 </label>
             </div>
 
@@ -73,7 +73,7 @@ const NavBar = ({handleTab}) => {
                     </button>
                     <label className='switch'>
                         <input type="checkbox" />
-                        <span className='slider'></span>
+                        <span className='slider_nav'></span>
                     </label>
                 </div>
             </div>
