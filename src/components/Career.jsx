@@ -1,10 +1,13 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import PlatziCard from './PlatziCard'
+import AcademloItem from './AcademloItem';
 import './styles/career.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import AcademloItem from './AcademloItem';
+import fundamentosLogo from '/src/assets/img/html-css-js.png'
+import reactLogo from '/src/assets/img/react.svg'
+import nodeLogo from '/src/assets/img/nodejs.svg'
 
 const platzi = [
     {
@@ -67,93 +70,96 @@ const platzi = [
 const academlo = [
     {
         id: 12,
-        image_url: '',
+        image: fundamentosLogo,
         curso: 'Fundamentos de Desarrollo Web',
-        description: 'asjhajshajshajshajsh'
+        description: 'The student obtained the necessary skills to correctly develop the visual part of a responsive website without using libraries/frameworks, as well as adding dynamic content with javascript, working collaboratively with git.'
     },
     {
         id: 34,
-        image_url: '',
+        image: reactLogo,
         curso: 'Desarrollo de Aplicaciones Web con React',
-        description: 'ajskasjaksjaksjaksj'
+        description: 'The student learned to create web applications with React JS, achieving great user interaction using previous knowledge of HTML, CSS and Javascript.'
     },
     {
         id: 56,
-        image_url: '',
+        image: nodeLogo,
         curso: 'Backend con Node',
-        description: 'asjkasjaksjaksjaksj'
+        description: 'The student learned how to build a server-side application with Node and Express from 0 to deployment on a server. They will have the ability to build a Rest API using a relational database, user authentication, security against XSS and CSRF attacks, validate the data received by the server and build custom middlewares with Express.'
     }
 ]
 
-const dropDownButton = (recived) => {
+const Career = () => {
+
     const [open, setOpen] = useState(false)
-    return open
-}
 
-class Career extends Component {
-    render() {
+    const handleTap = (e) => {
+        setOpen(e)
+    }
 
-        const settings = {
-            dots: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            autoplay: true,
-            speed: 2000,
-            autoplaySpeed: 2000,
-            cssEase: "linear"
-        };
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        cssEase: "linear"
+    };
 
-        return (
-            <div className='carrer_container'>
-                <div className='academlo_container'>
-                    <div className="academlo_title"><h2>Academlo Bootcamp</h2></div>
+    return (
+        <div className='career_container'>
+            <div className='academlo_container'>
+                <div className="academlo_title"><h2>Academlo Bootcamp</h2></div>
+                <div className="academlo_card_container">
+
                     <div className='academlo_card'>
                         <div className="academlo_card_logo">
                             <img src="/src/assets/img/academlo_logo.jpg" alt="logo-academlo" />
                         </div>
                         <div className='academlo_card_title'><h3>FULL STACK DEVELOPER</h3></div>
                         <div className='academlo_card_container_button'>
-                            <button className='academlo_card_button' onClick={() =>{ dropDownButton(true)} }>
+                            <button className='academlo_card_button' onClick={() => handleTap(!open) }>
                                 <img src="/src/assets/img/arrow-down-circle.svg" alt="drop-down-arrow" />
                             </button>
                         </div>
-                        <div className={`certificates_container ${dropDownButton ? 'active' : 'close' }` }>
-                            {
-                                academlo.map(academloItem => (
-                                    <div className='academlo_certificates' key={academloItem.id}>
-                                        <AcademloItem
-                                            curso={academloItem.curso}
-                                            image_url={academloItem.image_url}
-                                            description={academloItem.description}
-                                        />
-                                    </div>
-                                ))
-                            }
-                        </div>
                     </div>
-                </div>
-                <div className='slider_platzi_container'>
-                    <div className='platzi_title'>
-                        <img src="" alt="" />
-                        <h2>Platzi</h2>
-                    </div>
-                    <Slider {...settings}>
+                    <div className={open ? 'active_cert' : 'close_cert'}>
                         {
-                            platzi.map(platziCard => (
-                                <div className='platzi__item' key={platziCard.id}>
-                                    <PlatziCard
-                                        curso={platziCard.curso}
-                                        image_url={platziCard.image_url}
+                            academlo.map(academloItem => (
+                                <div className='academlo_certificates' key={academloItem.id}>
+                                    <AcademloItem
+                                        curso={academloItem.curso}
+                                        image={academloItem.image}
+                                        description={academloItem.description}
                                     />
                                 </div>
                             ))
                         }
-                    </Slider>
+                    </div>
+
                 </div>
             </div>
-        );
-    }
+            <div className='slider_platzi_container'>
+                <div className='platzi_title'>
+                    <img src="" alt="" />
+                    <h2>Platzi</h2>
+                </div>
+                <Slider {...settings}>
+                    {
+                        platzi.map(platziCard => (
+                            <div className='platzi__item' key={platziCard.id}>
+                                <PlatziCard
+                                    curso={platziCard.curso}
+                                    image_url={platziCard.image_url}
+                                />
+                            </div>
+                        ))
+                    }
+                </Slider>
+            </div>
+        </div>
+    );
 }
 
 export default Career

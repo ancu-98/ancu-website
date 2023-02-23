@@ -1,3 +1,10 @@
+.career_container {
+    border: 2px solid purple;
+    width: 700px;
+    height: 100%;
+}
+
+
 .academlo_container {
     border: 2px solid pink;
     display: flex;
@@ -12,19 +19,32 @@
     font-size: 1.6rem;
 }
 
+.academlo_card_container {
+    border: 2px solid yellow;
+    width: 344px;
+    min-width: 204px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.5 2fr;
+    grid-template-areas:
+        "card"
+        "certificates";
+}
+
 .academlo_card {
+    grid-area: card;
     width: 340px;
     min-width: 200px;
-    height: 90px;
+    height: 100px;
     box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
-    margin: 16px 0;
-    border: 2px solid black;
+    border: 2px solid var(--color-black);
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     grid-template-rows: 1fr 0.5fr;
     grid-template-areas:
         "logo title"
-        "logo description";
+        "logo button"
+        "certificate certificate";
     place-items: center;
 }
 
@@ -58,56 +78,71 @@
     animation: load89234 2s infinite;
 }
 
-.academlo_card_title h3 {
-    border: 2px solid blue;
-    text-align: center;
-    font-size: 1.4rem;
-}
-
-.academlo_card_button {
-    grid-area: description;
-    margin-right: 12px;
-    margin-bottom: 4px;
-    width: 100%;
-    height: 2.8rem;
-    display: flex;
-    justify-content: center;
-}
-
-.academlo_card_button button {
-    width: 60px;
-    border-radius: 5px;
-    border: 2px solid var(--color-black);
-    cursor: pointer;
-    background-color: var(--color-ligth);
-}
-
-.academlo_card_button button img{
-    width: 100%;
-    height: 100%;
-}
-
-.academlo_card_button button img:hover {
-
-}
-
-
-
 @keyframes load89234 {
     100% {
         background-position: -100% 0;
     }
 }
 
+.academlo_card_title h3 {
+    border: 2px solid blue;
+    text-align: center;
+    font-size: 1.4rem;
+}
 
+.academlo_card_container_button {
+    grid-area: button;
+    margin-right: 12px;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+}
 
+.academlo_card_button {
+    margin-right: 12px;
+    width: 70px;
+    height: 2.8rem;
+    border-radius: 5px;
+    border: 2px solid var(--color-black);
+    background-color: var(--color-ligth);
+}
 
+.academlo_card_button img {
+    width: 100%;
+    height: 100%;
+}
 
+/* modificar rotación del la imagen*/
+.academlo_card_button:hover img {
+    -webkit-transform: rotate(180deg);
+    transition: 0.6s ease-in-out;
+}
 
+.active_cert {
+    grid-area: certificates;
+    width: 340px;
+    height: 100%;
+    padding: 0.4rem;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 1s ease;
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    overflow-x: hidden;
+}
 
-
-
-
+.close_cert {
+    grid-area: certificates;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 1s ease;
+    overflow: hidden;
+}
 
 .slider_platzi_container {
     border: 2px solid red;
