@@ -24,8 +24,8 @@ const SetUpMenu = () => {
                     <NavBar
                         handleTab={handleTab}
                     />
-
                 </header>
+
                 <main className='main__container'>
                     <div className={ show===1 ? 'home__container': 'inactive'}>
                         <Home />

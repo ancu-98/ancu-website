@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AboutMe from './AboutMe'
-import Carrer from './Career'
+import Career from './Career'
 import Skills from './Skills'
 import './styles/about.css'
 
 const About = () => {
+
+    const [show, setShow] = useState(0)
+
+    const handleTap = (e) => {
+        setShow(e)
+    }
+
     return (
         <div className="about_container">
             <div className="card_about">
@@ -35,17 +42,23 @@ const About = () => {
                 </div>
                 <div className="about_options">
                     <div className='options'>
-                        <li> Skills </li>
-                        <li> About Me </li>
-                        <li> Career </li>
+                        <button onClick={() => handleTap(1)} > Skills </button>
+                        <button onClick={() => handleTap(2)} > About Me </button>
+                        <button onClick={() => handleTap(3)} > Career </button>
                     </div>
                 </div>
 
             </div>
             <div className='card__content'>
-                <Skills />
-                <AboutMe />
-                <Carrer />
+                <div className={show===1 ? 'card_skills_container' : 'inactive_about'}>
+                    <Skills />
+                </div>
+                <div className={show===2 ? 'card_aboutMe_container' : 'inactive_about'}>
+                    <AboutMe />
+                </div>
+                <div className={show===3 ? 'card_career_container' : 'inactive_about'}>
+                    <Career />
+                </div>
             </div>
         </div>
     )
