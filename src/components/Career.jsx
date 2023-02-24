@@ -92,20 +92,21 @@ const Career = () => {
                 </div>
 
             </div>
-            <div className="university_container">
-                <div className='university_logo'>
-                    <img src="/src/assets/img/logo_udec.png" alt="logo-udec" />
+            <div className="university_card_container">
+                <div className="university_card">
+                    <div className='university_logo'>
+                        <img src="/src/assets/img/logo_udec.png" alt="logo-udec" />
+                    </div>
+                    <ul className='university_list' >
+                        <li> <span>Academic program:</span> {university.academic_program}</li>
+                        <li> <span>Title to be awarded:</span> {university.title_awared} </li>
+                        <li> <span>Level of training:</span> {university.level_training}</li>
+                        <li> <span>Type of training:</span> {university.type_training}</li>
+                        <li> <span>Metodology:</span> {university.metodology}</li>
+                        <li> <span>Estimated duration:</span> {university.duration} </li>
+                        <li> <span>Current location:</span> {university.semester_location}</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Academic program: {university.academic_program}</li>
-                    <li>Title to be awarded: {university.title_awared} </li>
-                    <li>Level of training: {university.level_training}</li>
-                    <li>Type of training: {university.type_training}</li>
-                    <li>Metodology: {university.metodology}</li>
-                    <li>Estimated duration: {university.duration} </li>
-                    <li>Actually location: {university.semester_location}</li>
-
-                </ul>
             </div>
         </div>
     );

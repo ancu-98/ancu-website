@@ -82,8 +82,8 @@ const academlo = [
 ]
 
 const university = {
-    academic_program: 'Ingeniería de Sistemas y Computación',
-    title_awared: 'Ingeniero de Sistemas y Computación' ,
+    academic_program: 'Systems and Computer Engineering',
+    title_awared: 'Systems and Computer Engineer' ,
     level_training: 'undergraduate degrees' ,
     type_training: 'college degree' ,
     metodology: 'On-site',
