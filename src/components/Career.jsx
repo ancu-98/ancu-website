@@ -5,11 +5,9 @@ import './styles/career.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { platzi, academlo, university } from '../utils/career.js'
+import { platzi, academlo, university } from '../utils/about.js'
 
 const platzi_logo = 'https://static.platzi.com/media/platzi-isotipo@2x.png'
-
-console.log(platzi)
 
 const Career = () => {
 

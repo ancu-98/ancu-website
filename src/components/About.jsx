@@ -17,8 +17,8 @@ const About = () => {
             <div className="card_about">
 
                 <div className='about_main'>
-                    <div className='img_main'>
-                        <img src="/src/assets/img/perfil-small.jpg" alt="img-profile" />
+                    <div className='img_main hvr-outline-out'>
+                        <img src="/src/assets/img/profile-img.svg" alt="img-profile" />
                     </div>
 
                     <aside>
@@ -47,8 +47,8 @@ const About = () => {
                         <button onClick={() => handleTap(3)} > Career </button>
                     </div>
                 </div>
-
             </div>
+
             <div className='card__content'>
                 <div className={show===1 ? 'card_skills_container' : 'inactive_about'}>
                     <Skills />

@@ -1,5 +1,5 @@
 .academloItems_container {
-    border: 2px solid greenyellow;
+    border-bottom: 1px solid var(--color-ligth);
     width: 316px;
     height: 100%;
     display: grid;
