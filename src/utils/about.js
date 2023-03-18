@@ -1,6 +1,15 @@
 import fundamentosLogo from '/src/assets/img/html-css-js.png'
 import reactLogo from '/src/assets/img/react.svg'
 import nodeLogo from '/src/assets/img/nodejs.svg'
+import css from '/src/assets/img/css_icon.svg'
+import html from '/src/assets/img/html_icon.svg'
+import js from '/src/assets/img/js_icon.svg'
+import reactIcon from '/src/assets/img/react_original_logo_icon.svg'
+import reduxIcon from '/src/assets/img/redux_original_logo_icon.svg'
+import nodeIcon from '/src/assets/img/node_icon.svg'
+import postgresql from '/src/assets/img/postgresql_logo_icon.svg'
+import git from '/src/assets/img/git_icon.svg'
+
 
 const platzi = [
     {
@@ -68,13 +77,13 @@ const academlo = [
         description: 'The student obtained the necessary skills to correctly develop the visual part of a responsive website without using libraries/frameworks, as well as adding dynamic content with javascript, working collaboratively with git.'
     },
     {
-        id: 34,
+        id: 13,
         image: reactLogo,
         curso: 'Desarrollo de Aplicaciones Web con React',
         description: 'The student learned to create web applications with React JS, achieving great user interaction using previous knowledge of HTML, CSS and Javascript.'
     },
     {
-        id: 56,
+        id: 14,
         image: nodeLogo,
         curso: 'Backend con Node',
         description: 'The student learned how to build a server-side application with Node and Express from 0 to deployment on a server. They will have the ability to build a Rest API using a relational database, user authentication, security against XSS and CSRF attacks, validate the data received by the server and build custom middlewares with Express.'
@@ -91,10 +100,75 @@ const university = {
     semester_location: '5 semester'
 }
 
+const skills = [
+    {
+        id:15 ,
+        skill: 'HTML',
+        img: html
+    },
+    {
+        id:16 ,
+        skill: 'CSS',
+        img: css
+    },
+    {
+        id:17 ,
+        skill: 'JavaScript',
+        img: js
+    },
+    {
+        id:18 ,
+        skill: 'React',
+        img: reactIcon
+    },
+    {
+        id:19 ,
+        skill: 'Redux',
+        img: reduxIcon
+    },
+    {
+        id:20 ,
+        skill: 'NodeJS',
+        img: nodeIcon
+    },
+    {
+        id:21 ,
+        skill: 'PostgreSQL',
+        img: postgresql
+    },
+    {
+        id:22 ,
+        skill: 'Git',
+        img: git
+    }
+]
+
+const frontedSkills = {
+    skill1: 'Responsive Desing',
+    skill2: 'HTML, CSS y JavaScript',
+    skill3: 'Redux',
+    skill4: "Custom Hooks y Axios - consumo de API's",
+    skill5: 'Rutas Protegidas'
+}
+
+const backendSkills = {
+    skill1: 'Programación Orientada a Objetos POO' ,
+    skill2: 'Programación Funcional',
+    skill3: 'Arquitectura MVC',
+    skill4: 'Relaciones en bases de datos (Template Engines)',
+    skill5: 'Express',
+    skill6: 'Sequilize ORM',
+    skill7: 'JSON Web Tokens(JWT)',
+    skill8: 'API Rest con Node y Express (seguridad y documentación)'
+}
+
 export {
     platzi,
     academlo,
-    university
+    university,
+    skills,
+    frontedSkills,
+    backendSkills
 }
 
 
