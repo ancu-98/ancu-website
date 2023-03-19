@@ -54,7 +54,7 @@ const Proyects = () => {
           <div className='general'>
             <h1> Jane Doe</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
-            <span className='more'>Mouse over te card for more info</span>
+            <span className='more'>Hover the card for more info</span>
           </div>
 
         </div>
