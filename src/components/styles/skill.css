@@ -1,10 +1,9 @@
 .skill_item {
-    width: 8rem;
-    height: 8rem;
-    border: 2px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-ligth);
+    border-radius: 1rem;
+    backdrop-filter: blur(4px);
 }
 
 .hvr-rectangle-out {
@@ -14,12 +13,10 @@
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
-    background: #e1e1e1;
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    border: 2px solid yellow;
 }
 
 .hvr-rectangle-out:before {
@@ -30,7 +27,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: var(--color-ligth);
+    border-radius: 0.8rem;
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition-property: transform;
@@ -44,7 +42,7 @@
 .hvr-rectangle-out:hover,
 .hvr-rectangle-out:focus,
 .hvr-rectangle-out:active {
-    color: white;
+    color: var(--color-black);
 }
 
 .hvr-rectangle-out:hover:before,
@@ -54,12 +52,15 @@
     transform: scale(1);
 }
 
-.hvr-rectangle-out h3 {
-    position: absolute;
-    top: 44%;
-    left: 21%;
+.skill_item h3 {
+    width: 100%;
+    font-size: 1.4rem;
+    position: relative;
+    top: calc(50% - 8px);
     opacity: 0;
     transition: all 0.4s ease-in;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .skill_item:hover h3 {
@@ -69,10 +70,13 @@
     transform: scale(1);
 }
 
-.hvr-rectangle-out img {
+.skill_item img {
     position: absolute;
-    top: 32%;
-    left: 32%;
+    top: 0.2%;
+    width: 100%;
+    height: 100%;
+    padding: 0.8rem;
+    backdrop-filter: blur(4px);
 }
 
 .skill_item:hover img {
