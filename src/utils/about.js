@@ -147,8 +147,7 @@ const frontedSkills = {
     skill1: 'Responsive Desing',
     skill2: 'HTML, CSS y JavaScript',
     skill3: 'Redux',
-    skill4: "Custom Hooks y Axios - consumo de API's",
-    skill5: 'Rutas Protegidas'
+    skill4: "Custom Hooks y Axios - consumo de API's"
 }
 
 const backendSkills = {

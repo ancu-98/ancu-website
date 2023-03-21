@@ -26,7 +26,6 @@ const Skills = () => {
                     <li>{frontedSkills.skill2}</li>
                     <li>{frontedSkills.skill3}</li>
                     <li>{frontedSkills.skill4}</li>
-                    <li>{frontedSkills.skill5}</li>
                 </ul>
             </div>
             <div className="backend_skills">

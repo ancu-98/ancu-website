@@ -3,7 +3,6 @@ import About from './About'
 import Contact from './Contact'
 import Home from './Home'
 import NavBar from './NavBar'
-import OptionsContainer from './OptionsContainer'
 import Proyects from './Proyects'
 import './styles/setUpMenu.css'
 
@@ -26,24 +25,37 @@ const SetUpMenu = () => {
                     />
                 </header>
 
-                <main className='main__container'>
-                    <div className={ show===1 ? 'home__container': 'inactive'}>
+                <div className='main__card'>
+                    <p>Come Deeper</p>
+                    <div className="one">
+                        <div className="thwo">
+                            <div className="three">
+                                <div className="four">
+                                    <div className="five">
+                                        <div className='six'>
+                                            <p>hola</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='main__container'>
+                    <div className={show === 1 ? 'home__container' : 'inactive'}>
                         <Home />
                     </div>
-                    <div className={ show===2 ? 'about__container' : 'inactive'}>
+                    <div className={show === 2 ? 'about__container' : 'inactive'}>
                         <About />
                     </div>
-                    <div className={ show===3 ? 'proyects__container' : 'inactive'}>
+                    <div className={show === 3 ? 'proyects__container' : 'inactive'}>
                         <Proyects />
                     </div>
-                    <div className={ show===4 ? 'contact__container' : 'inactive'}>
+                    <div className={show === 4 ? 'contact__container' : 'inactive'}>
                         <Contact />
                     </div>
-                </main>
+                </div>
             </div>
-            <footer className='footer__container'>
-                    <OptionsContainer/>
-            </footer>
         </div>
     )
 }
