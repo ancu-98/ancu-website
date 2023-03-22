@@ -33,15 +33,136 @@
         height: 100%;
     }
 
+    
     .navBar__container-all .navBar__container-mobile{
-        display: inline-block;
+        /* revisar el position */
+        display: block;
         border: 2px solid blueviolet;
-        background: transparent;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-content: center;
     }
 
     .navBar__container-mobile .navBar__container-button-list {
+        position: relative;
+        width: 90%;
+        height: 4.4rem;
+        display: flex;
+        background: var(--color-black);
+        justify-content: center;
+        align-items: center;
         border: 2px solid blue;
+        border-radius: 0.8rem;
     }
 
+    .navBar__container-button-list ul{
+        display: flex;
+        width: 100%;
+    }
+
+    .navBar__container-button-list ul .button__item-li{
+        position: relative;
+        width: 100%;
+        height: 4rem;
+        z-index: 1;
+        /* border: 2px solid yellow; */
+    }
+
+    .navBar__container-button-list ul .button__item-li .item-li{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        /* border: 2px solid red; */
+    }
+
+    .navBar__container-button-list .button__item-li .item-li .icon{
+        position: relative;
+        display: block;
+        bottom: 0.8rem;
+
+
+        font-size: 1.5rem;
+        text-align: center;
+        transition: 0.5s;
+        color: var(--color-ligth);
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .navBar__container-button-list ul li.active .item-li .icon{
+        transform: translateY(-19px);
+    }
+
+    .navBar__container-button-list ul .button__item-li .item-li .icon img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .navBar__container-button-list ul .button__item-li .item-li .text{
+        position: absolute;
+        color: var(--color-ligth);
+        font-weight: 400;
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .navBar__container-button-list ul li.active .item-li .text{
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+    .navBar__container-button-list ul .indicator {
+        position: absolute;
+        top: -50%;
+        left: 7.8%;
+
+        width: 40px;
+        height: 40px;
+        background: black;
+        border-radius: 50%;
+        border: 4px solid var(--color-rgba-border);
+        transition: 0.5s;
+    }
+
+    .navBar__container-button-list ul .indicator::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -22.5px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-right-radius: 20px;
+        /*En el color del boxshadow , debe de ir el color del background, o se al rgba del containerbox
+        igual que el color de borde alrededor del circulo
+        */
+        box-shadow: 0px -10px 0 0 var(--color-ligth);
+    }
+
+    .navBar__container-button-list ul .indicator::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -22.5px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-left-radius: 20px;
+        box-shadow: 0px -10px 0 0 var(--color-ligth);
+    }
+
+    .navBar__container-all .switch{
+        left: calc(50% + 40%);
+        /* bottom: 2.4rem; */
+    }
 
 }
