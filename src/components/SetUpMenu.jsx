@@ -41,6 +41,7 @@ const SetUpMenu = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className='main__container'>
                     <div className={show === 1 ? 'home__container' : 'inactive'}>
                         <Home />

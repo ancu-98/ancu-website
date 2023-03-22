@@ -31,6 +31,10 @@
         margin: 2px;
     }
 
+    .navBar__container-setup .switch{
+        left: calc(50% + 42%);
+    }
+
     /* - tablet */
 
 

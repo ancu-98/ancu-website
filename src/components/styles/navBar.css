@@ -3,8 +3,9 @@
 }
 
 .navBar__container-all {
+    position: relative;
     padding: 12px;
-    border-bottom: 2px solid var(--color-rgba-border);
+    border-bottom: 1px solid var(--color-rgba-border);
     display: flex;
     justify-content: center;
     align-content: center;
@@ -73,12 +74,11 @@
     /* Variables */
     --switch_width: 2em;
     --switch_height: 1em;
-    justify-self: flex-end;
-    align-self: center;
-    font-size: 17px;
+    justify-self: center;
     position: absolute;
-    display: inline-block;
-    right: 8%;            /* position rigth*/
+    font-size: 17px;
+    bottom: 2.4rem;
+    left: calc(50% + 44%);
     width: var(--switch_width);
     height: var(--switch_height);
 }
@@ -145,13 +145,3 @@ input:hover:checked+.slider_nav:before {
     box-shadow: 0 0.3em 0 var(--outline_color);
 }
 
-
-/* Hover efect */
-
-/* Media Query for de swirch*/
-@media (min-width: 900px) {
-    .switch{
-        left: 80%;
-        /* left: calc(100% - 212px); */
-    }
-}
