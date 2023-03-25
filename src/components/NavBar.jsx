@@ -1,9 +1,42 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './styles/navBar.css'
 import './styles/responsive/tablet.css'
 import './styles/responsive/mobile.css'
 
 const NavBar = ({ handleTab }) => {
+
+    const nameButtonsList = useRef([])
+
+    useEffect(() => {
+        const arrButtons = document.querySelectorAll('.button__item-li');
+        nameButtonsList.current = Array.from(arrButtons);
+    }, [])
+
+    
+    const [active, setActive] = useState(false)
+    
+    const handleButtonLi = (e) => {
+        setActive(e)
+        activeButton()
+    }
+
+    let nombreClase = ""
+    let removeClase = 'active'
+    let activeClass = 'active'
+
+    const activeButton = () => {
+        nameButtonsList.current.forEach( item => {
+            if( active === true){
+                nombreClase = item.classList.value
+                nombreClase = nombreClase.replace(removeClase,'')
+                // activeClass = item.classList.value.replace('', 'active')
+            }
+            console.log(active)
+        });
+    }
+
+
+
 
     return (
         <nav className='navBar__container-all'>
@@ -41,7 +74,7 @@ const NavBar = ({ handleTab }) => {
             <div className='navBar__container-mobile'>
                 <div className='navBar__container-button-list' >
                     <ul>
-                        <li className='button__item-li active' onClick={() => handleTab(1)} >
+                        <li className='button__item-li active' onClick={() => handleButtonLi(true)} ref={nameButtonsList}>
                             <a href="#" className='item-li'>
                                 <span className='icon'>
                                     <img src="/src/assets/img/home.svg" alt="logo_Home" />
@@ -49,7 +82,7 @@ const NavBar = ({ handleTab }) => {
                                 <span className='text'>Home</span>
                             </a>
                         </li>
-                        <li className='button__item-li' onClick={() => handleTab(2)} >
+                        <li className='button__item-li' onClick={() => handleButtonLi(true)} ref={nameButtonsList}>
                             <a href="#" className='item-li'>
                                 <span className='icon'>
                                     <img src="/src/assets/img/user.svg" alt="logo_About" />
@@ -57,7 +90,7 @@ const NavBar = ({ handleTab }) => {
                                 <span className='text'>About</span>
                             </a>
                         </li>
-                        <li className='button__item-li' onClick={() => handleTab(3)} >
+                        <li className='button__item-li' onClick={() => handleButtonLi(true)} ref={nameButtonsList} >
                             <a href="#" className='item-li'>
                                 <span className='icon'>
                                     <img src="/src/assets/img/briefcase-account.svg" alt="logo_proyects" />
@@ -65,10 +98,10 @@ const NavBar = ({ handleTab }) => {
                                 <span className='text'>Proyects</span>
                             </a>
                         </li>
-                        <li className='button__item-li' onClick={() => handleTab(4)} >
+                        <li className='button__item-li' onClick={() => handleButtonLi(true)} >
                             <a href="#" className='item-li'>
                                 <span className='icon'>
-                                    <img src="/src/assets/img/mail-flash.svg" alt="logo_contact" />
+                                    <img src="/src/assets/img/mail-flash.svg" alt="logo_contact" ref={nameButtonsList} />
                                 </span>
                                 <span className='text'>Contact</span>
                             </a>
