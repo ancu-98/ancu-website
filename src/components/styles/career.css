@@ -1,19 +1,22 @@
 .career_container {
     border: 2px solid purple;
-    width: 98vh;
-    height: 100%;
+    width: 100%;
+    min-width: 50%;
     display: grid;
-    grid-template-rows: 2fr 1.2fr 1fr;
+    grid-template-rows: 1fr 1.2fr 1fr;
     place-items: center;
 }
 
 .academlo_container {
+    grid-row-start: 1 ;
+    grid-row-end:2;
     border: 2px solid pink;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    min-width: 50%;
     height: 100%;
     padding: 2rem 0;
 }
@@ -28,23 +31,25 @@
 }
 
 .academlo_card_container {
-    width: 344px;
-    min-width: 204px;
+    width: 80%;
+    min-width: 50%;
     height: 30rem;
     display: grid;
-    grid-template-areas:
-        "card"
-        "certificates";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr ;
+    justify-items: center;
 }
 
 .academlo_card {
-    grid-area: card;
-    width: 340px;
-    min-width: 200px;
-    height: 100px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 80%;
+    height: 10rem;
     box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
     border: 0.08em solid var(--color-ligth);
-    border-radius: 0.8rem 0.8rem 0 0 ;
+    border-radius: 0.8rem 0.8rem 0 0;
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     grid-template-rows: 1fr 0.5fr;
@@ -53,6 +58,7 @@
         "logo button"
         "certificate certificate";
     place-items: center;
+    backdrop-filter: blur(4px);
 }
 
 .academlo_card_logo {
@@ -97,7 +103,7 @@
 
 .academlo_card_container_button {
     grid-area: button;
-    margin-right: 12px;
+    margin: 0 auto;
     width: 100%;
     height: 3rem;
     display: flex;
@@ -105,7 +111,6 @@
 }
 
 .academlo_card_button {
-    margin-right: 12px;
     width: 70px;
     height: 2.8rem;
     border-radius: 5px;
@@ -125,8 +130,9 @@
 }
 
 .active_cert {
-    grid-area: certificates;
-    width: 340px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 80%;
     height: 100%;
     padding: 0.4rem;
     opacity: 1;
@@ -140,15 +146,25 @@
     grid-template-columns: 1fr;
     place-items: center;
     overflow-x: hidden;
+    backdrop-filter: blur(4px);
+    color: var(--thumb_color);
+    box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2) inset;
 }
 
 .close_cert {
-    grid-area: certificates;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 80%;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: 1s ease;
     overflow-x: hidden;
+}
+
+.academlo_certificates {
+    border: 2px solid blue;
+    width: 100%;
 }
 
 .active_cert::-webkit-scrollbar,
@@ -166,6 +182,8 @@
 
 
 .slider_platzi_container {
+    grid-row-start: 2 ;
+    grid-row-end: 3;
     border: 2px solid red;
     background: transparent;
     display: flex;
@@ -173,18 +191,19 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    min-width: 50%;
     height: 100%;
     padding: 4px;
 }
 
 .platzi_title {
-    border: 2px solid royalblue;
     width: 120px;
     font-size: 1.6rem;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    color: var(--thumb_color);
 }
 
 .platzi_img {
@@ -198,18 +217,30 @@
 }
 
 .slider_platzi {
-    border: 2px solid lawngreen;
-    width: 56rem;
+    border: 2px solid black;
+    width: 90%;
+    min-width: 30%;
+}
+
+.slider_platzi .slider_container {
+    border: 0.2rem solid var(--color-ligth);
+    border-radius: 0.8rem;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    color: var(--thumb_color);
 }
 
 .platzi__item {
     border: 2px solid yellow;
-    width: 50px;
+    width: 100%;
     height: 120px;
     padding: 6px;
+    border-radius: 0.8rem;
 }
 
 .university_card_container {
+    grid-row-start: 3 ;
+    grid-row-end: 4;
     border: 2px solid black;
     width: 100%;
     height: 100%;
@@ -220,18 +251,19 @@
 }
 
 .university_card {
-    border: 2px solid rebeccapurple;
+    border: 0.2rem solid var(--color-ligth);
+    backdrop-filter: blur(4px);
+    border-radius: 0.8rem;
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     place-items: center;
-    width: 50rem;
-    height: 16rem;
+    width: 90%;
+    height: 70%;
 }
 
 .university_logo {
     width: 16rem;
     height: 8rem;
-    border: 2px solid red;
 }
 
 .university_logo img {
@@ -240,18 +272,99 @@
 }
 
 .university_list {
-    border: 2px solid blue;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    border-left: 0.2rem solid var(--color-ligth);
+    padding-left: 2rem;
 }
 
 .university_list li {
     font-size: 1.2rem;
+    color: var(--thumb_color)
 }
 
 .university_card li span {
-    color:red;
+    color: var(--color-ligth);
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .academlo_card {
+        width: 100%;
+    }
+
+    .active_cert, .close_cert {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .career_container {
+        grid-template-rows: 3fr 1.8fr 3fr;
+    }
+
+
+    .academlo_card_container {
+        grid-template-rows: 1fr 1fr;
+        height: 32rem;
+
+    }
+
+    .active_cert {
+        height: 16rem;
+    }
+
+    .academlo_card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 0.5fr;
+        height: 16rem;
+    }
+
+    .academlo_card .academlo_card_logo {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .academlo_card .academlo_card_title {
+        width: 90%;
+        margin: 0;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+    }
+
+    .academlo_card .academlo_card_container_button{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .university_card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+    }
+
+    .university_logo {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .university_list {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border-left: none;
+        border-top: 0.2rem solid var(--color-ligth);
+    }
+
+
 }

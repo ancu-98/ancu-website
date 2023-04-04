@@ -1,41 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './styles/navBar.css'
-import './styles/responsive/tablet.css'
-import './styles/responsive/mobile.css'
+
+import homeIcon from '/src/assets/img/home.svg'
+import userIcon from '/src/assets/img/user.svg'
+import proyectsIcon from '/src/assets/img/briefcase-account.svg'
+import emailIcon from '/src/assets/img/mail-flash.svg'
+
+const list = [
+    {id: 1, img: homeIcon, title: 'Home'},
+    {id: 2, img: userIcon, title: 'About'},
+    {id: 3, img: proyectsIcon, title: 'Proyects'},
+    {id: 4, img: emailIcon, title: 'Contact'}
+]
 
 const NavBar = ({ handleTab }) => {
 
-    const nameButtonsList = useRef([])
+    const [activeItem, setActiveItem] = useState(null)
 
-    useEffect(() => {
-        const arrButtons = document.querySelectorAll('.button__item-li');
-        nameButtonsList.current = Array.from(arrButtons);
-    }, [])
+    const listRef = useRef([]);
 
-    
-    const [active, setActive] = useState(false)
-    
-    const handleButtonLi = (e) => {
-        setActive(e)
-        activeButton()
+    const handleClick = (item) => {
+        setActiveItem(item.id);
+        listRef.current.forEach(item => item.classList.toggle('active'));
+        item.classList.add('active');
     }
 
-    let nombreClase = ""
-    let removeClase = 'active'
-    let activeClass = 'active'
-
-    const activeButton = () => {
-        nameButtonsList.current.forEach( item => {
-            if( active === true){
-                nombreClase = item.classList.value
-                nombreClase = nombreClase.replace(removeClase,'')
-                // activeClass = item.classList.value.replace('', 'active')
-            }
-            console.log(active)
-        });
+    const updateRefs = (item, index) => {
+        listRef.current[index] = item;
     }
-
-
 
 
     return (
@@ -74,38 +66,23 @@ const NavBar = ({ handleTab }) => {
             <div className='navBar__container-mobile'>
                 <div className='navBar__container-button-list' >
                     <ul>
-                        <li className='button__item-li active' onClick={() => handleButtonLi(true)} ref={nameButtonsList}>
-                            <a href="#" className='item-li'>
-                                <span className='icon'>
-                                    <img src="/src/assets/img/home.svg" alt="logo_Home" />
-                                </span>
-                                <span className='text'>Home</span>
-                            </a>
-                        </li>
-                        <li className='button__item-li' onClick={() => handleButtonLi(true)} ref={nameButtonsList}>
-                            <a href="#" className='item-li'>
-                                <span className='icon'>
-                                    <img src="/src/assets/img/user.svg" alt="logo_About" />
-                                </span>
-                                <span className='text'>About</span>
-                            </a>
-                        </li>
-                        <li className='button__item-li' onClick={() => handleButtonLi(true)} ref={nameButtonsList} >
-                            <a href="#" className='item-li'>
-                                <span className='icon'>
-                                    <img src="/src/assets/img/briefcase-account.svg" alt="logo_proyects" />
-                                </span>
-                                <span className='text'>Proyects</span>
-                            </a>
-                        </li>
-                        <li className='button__item-li' onClick={() => handleButtonLi(true)} >
-                            <a href="#" className='item-li'>
-                                <span className='icon'>
-                                    <img src="/src/assets/img/mail-flash.svg" alt="logo_contact" ref={nameButtonsList} />
-                                </span>
-                                <span className='text'>Contact</span>
-                            </a>
-                        </li>
+                        {
+                            list.map((item, index) => (
+                                <li
+                                    key={item.id}
+                                    ref={() => updateRefs(item, index)}
+                                    className={item.id === activeItem ? 'active' : ''}
+                                    onClick={() => handleClick(item)}
+                                >
+                                    <a href="#" className='item-li'>
+                                        <span className='icon'>
+                                            <img src={item.img} alt="logo_item" />
+                                        </span>
+                                        <span className='text'>{item.title}</span>
+                                    </a>
+                                </li>
+                            ))
+                        }
                         <div className='indicator'></div>
                     </ul>
                     <label className='switch'>

@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { platzi, academlo, university } from '../utils/about.js'
 
+
 const platzi_logo = 'https://static.platzi.com/media/platzi-isotipo@2x.png'
 
 const Career = () => {
@@ -17,15 +18,33 @@ const Career = () => {
         setOpen(e)
     }
 
-    const settings = {
+    var settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        autoplay: true,
         speed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        autoplay: true,
         autoplaySpeed: 2000,
-        cssEase: "linear"
+        cssEase: "linear",
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     return (
@@ -75,18 +94,20 @@ const Career = () => {
                     <h2>Platzi</h2>
                 </div>
                 <div className='slider_platzi'>
-                    <Slider {...settings}>
-                        {
-                            platzi.map(platziCard => (
-                                <div className='platzi__item' key={platziCard.id}>
-                                    <PlatziCard
-                                        curso={platziCard.curso}
-                                        image_url={platziCard.image_url}
-                                    />
-                                </div>
-                            ))
-                        }
-                    </Slider>
+                    <div className='slider_container'>
+                        <Slider {...settings}>
+                            {
+                                platzi.map(platziCard => (
+                                    <div className='platzi__item' key={platziCard.id}>
+                                        <PlatziCard
+                                            curso={platziCard.curso}
+                                            image_url={platziCard.image_url}
+                                        />
+                                    </div>
+                                ))
+                            }
+                        </Slider>
+                    </div>
                 </div>
 
             </div>
