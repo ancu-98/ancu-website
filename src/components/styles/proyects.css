@@ -4,11 +4,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(autofill, minmax(8rem, 16rem));
     gap: 2rem;
-    padding: 20px;
 }
 
 .proyects_container_cards {
-    border: 2px solid red;
+    border: 2px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
