@@ -2,40 +2,43 @@
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     width: 100%;
-    max-width: 450px;
-    min-width: 400px;
-    height: 250px;
+    max-width: 45rem;
+    min-width: 38rem;
+    height: 25rem;
     backdrop-filter: blur(8px);
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     border-radius: 6px;
-    overflow: hidden;
-    position: relative;
+    /* overflow: hidden;
+    position: relative; */
     margin: 1.5rem;
     border: 2px solid blue;
 }
 
-.card .additional {
+/* .card  {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     border: 2px solid yellowgreen;
     position: relative;
-    left: 0;
-    width: 34%;
+    left: 0; 
+    width: 100%;
     height: 100%;
     background: var(--color-black);
     transition: width 0.8s;
-    overflow: hidden;
-    z-index: 2;
+    overflow: hidden; 
+     z-index: 2;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.5fr 1fr; 
 }
 
-.card:hover .additional {
+.card:hover  {
+    grid-column-end: 3;
     width: 100%;
     border-radius: 0 5px 5px 0;
-}
+} */
 
-.card .additional .proyect-card {
+.card .proyect-card {
+    grid-column-start: 1;
+    grid-column-end: 2;
     width: 14.8em;
     max-width: 100%;
     height: 100%;
@@ -50,18 +53,8 @@
     z-index: 4;
 }
 
-.card .additional .proyect-card::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 10%;
-    right: -2px;
-    height: 80%;
-    border-left: 2px solid rgba(0, 0, 0, 0.025)
-}
-
-.card .additional .proyect-card .proyect-name,
-.card .additional .proyect-card .points {
+.card  .proyect-card .proyect-name,
+.card  .proyect-card .points {
     color: var(--color-ligth);
     text-transform: uppercase;
     text-align: center;
@@ -74,7 +67,7 @@
     background-color: var(--color-black);
 }
 
-.card .additional .proyect-card .icon-container{
+.card  .proyect-card .icon-container{
     width: 8em;
     height: 8em;
     padding: 0.4rem;
@@ -82,7 +75,7 @@
     border-radius: 0.8rem;
 }
 
-.card .additional .proyect-card .icon-container img {
+.card  .proyect-card .icon-container img {
     width: 100%;
     height: 100%;
     border: 1px solid var(--color-black);
@@ -91,27 +84,28 @@
 
 /*--------------------------*/
 
-.card .additional .more-info {
+.card  .more-info {
     position: relative;
     grid-column-start: 2;
     grid-column-end: 3;
-    width: 100%;
+    width: 1%;
+    /* min-width: 10rem; */
+    transition: width 0.8s;
     height: 100%;
-    border: 2px solid blue;
+    border: 2px solid greenyellow;
     display: grid;
     place-items: center;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
-
-/* falto estilo de second card .green -> de la pagina*/
-
-.card .additional .more-info .img-container{
+.card  .more-info .img-container{
+    opacity: 0;
     position: relative;
-    margin:0 auto;
-    width: 274px;
-    height: 150px;
-    border: 1px solid var(--color-ligth);
+    margin: auto;
+    width: 100%;
+    min-width: 50% ;
+    height: 14rem;
+    border: 1px solid red;
     border-radius: 0.8rem;
 }
 
@@ -121,20 +115,20 @@
     border-radius: 0.8rem;
 }
 
-/* falto estilo de second card .green -> de la pagina*/
-
-
-
-.card .additional .stats_container {
+.card .more-info .stats_container {
+    opacity: 0;
     border-top: 1px solid var(--color-ligth);
-    width: 270px;
+    width: 100%;
+    min-width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    position: relative;
-    margin-top: 6px;
+    margin-bottom: 0;
+
 }
+
 
 .stats_container div {
     width: 8rem;
@@ -172,6 +166,7 @@
 /* --------------------------------*/
 
 .card .general {
+    opacity: 1;
     grid-column-start: 2;
     grid-column-end: 3;
     width: 100%;
@@ -179,7 +174,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    box-sizing: border-box;
     padding: 1rem;
     padding-top: 0;
     z-index: 1;
@@ -190,4 +184,82 @@
     bottom: 1rem;
     right: 1rem;
     font-size: 1rem;
+}
+
+/* Card:Hover Effects */
+.card:hover .general {
+    opacity: 0;
+}
+
+.card:hover .img-container,
+.card:hover .stats_container{
+    opacity: 1;
+}
+
+.card:hover .more-info{
+    width: 100%;
+}
+
+
+
+@media (max-width: 600px) {
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        width: 100%;
+        min-width: 50%;
+        height: 30rem;
+    }
+
+    .card .proyect-card {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 100%;
+        min-width: 50%;
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr ;
+        grid-template-columns: 2fr 0.5fr;
+        grid-template-areas:
+            "title icon"
+            "points icon"
+        ;
+    }
+
+    .proyect-card .proyect-name {
+        grid-area: title;
+    }
+
+    .proyect-card .icon-container {
+        grid-area: icon;
+    }
+
+    .proyect-card .points {
+        grid-area: points;
+    }
+
+    .card .more-info {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 100%;
+        height: 1%;
+        transition: heigth 2s ease;
+    }
+
+    .card  .more-info .img-container{
+        height: 11rem;
+    }
+
+    .card .general {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    /* Card:Hover Effects */
+    .card:hover .more-info{
+        height: 100%;
+    }
 }
