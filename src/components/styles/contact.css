@@ -14,8 +14,10 @@
 /* Title */
 .form__title {
     display: flex;
+    justify-content: center;
     border: 1px solid var(--track_color);
     border-radius: 0.3em;
+    width: 100%;
 }
 
 .box {
@@ -133,7 +135,7 @@
 
 .input_group input:active,
 .input_text textarea:active {
-    box-shadow: 2px 2px 15px #8707ff inset;
+    box-shadow: 2px 2px 15px var(--color-black) inset;
 }
 
 .input_group :is(input:focus, input:valid)~label {
@@ -146,7 +148,7 @@
 
 .input_group :is(input:focus, input:valid),
 .input_text :is(textarea:focus, textarea:valid) {
-    border-color: red;
+    border-color: var(--color-black);
 }
 
 .input_text textarea::placeholder {
@@ -159,26 +161,32 @@
 }
 
 /* Input Button */
-.bt {
-    user-select: none;
-    box-shadow: #cacaca 2px 2px 10px 1px;
-    border-radius: 12px;
-    height: 60px;
-    line-height: 60px;
-    width: 155px;
-    transition: all 0.2s ease;
-    position: relative;
+.button_container {
+    width: 100%;
+    height: 8rem;
     border: 2px solid blue;
-    justify-self: center;
-    margin-top: 16px;
-    margin-left: 214px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.bt input {
+
+.button_container .bt {
+    user-select: none;
+    box-shadow: var(--color-black) 2px 2px 10px 1px;
+    border-radius: 12px;
+    height: 60%;
+    line-height: 4rem;
+    width: 16rem;
+    transition: all 0.2s ease;
+}
+
+.button_container .bt input {
     width: 100%;
     height: 100%;
-    background-color: var(--color-black);
-    color: var(--color-ligth);
+    background-color: var(--color-ligth);
+    color: var(--color-black);
     border-radius: 12px;
     font-size: 1.8rem;
 }
@@ -188,7 +196,6 @@
     width: 0;
     border-radius: 2px;
     position: absolute;
-    left: 15%;
     top: 25%;
 }
 
@@ -199,7 +206,7 @@
     transform: translateX(1px) translateY(1px);
 }
 
-.bt:hover .msg {
+.bt:hover .msg{
     animation: msgRun 2s forwards;
 }
 

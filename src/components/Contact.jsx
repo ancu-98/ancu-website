@@ -34,13 +34,13 @@ const Contact = () => {
       </div>
       <form ref={form} className='form__mail' onSubmit={sendEmail}>
         <div className='input_group'>
-          <input type="text" name="user_name" required />
-          <label>Name</label>
+          <input type="text" name="user_name" id='input_name' required />
+          <label htmlFor="input_name">Name</label>
         </div>
         <hr />
         <div className='input_group'>
-          <input type="email" name="user_email" required />
-          <label>Email</label>
+          <input type="email" name="user_email" id='input_email' autoComplete='on' required />
+          <label htmlFor="input_email">Email</label>
         </div>
         <hr />
         <div className='input_text'>
@@ -48,9 +48,11 @@ const Contact = () => {
         </div>
         <hr />
 
-        <div className="bt" id="bt">
-          <span className="msg" id="msg"></span>
-          <input type="submit" value="Send" />
+        <div className='button_container'>
+          <div className="bt" id="bt">
+            <span className="msg" id="msg"></span>
+            <input type="submit" value="Send" />
+          </div>
         </div>
       </form>
     </div>

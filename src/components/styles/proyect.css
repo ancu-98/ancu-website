@@ -1,6 +1,6 @@
 .card {
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.5fr 01fr;
     width: 100%;
     max-width: 45rem;
     min-width: 38rem;
@@ -96,15 +96,16 @@
     display: grid;
     place-items: center;
     /* overflow-x: hidden; */
+    /* transform: translateX(-2px) */
 }
 
 .card  .more-info .img-container{
     opacity: 0;
     position: relative;
-    margin: auto;
-    width: 100%;
-    min-width: 50% ;
-    height: 14rem;
+    margin: 0.4rem 0;
+    width: 84%;
+    min-width: 10rem;
+    height: 15rem;
     border: 1px solid red;
     border-radius: 0.8rem;
 }
@@ -124,11 +125,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 0;
-
+    gap: 1.2rem;
 }
-
 
 .stats_container div {
     width: 8rem;
@@ -139,12 +137,12 @@
     align-items: center;
 }
 
-.stats_container div h3{
+.stats_container div .title{
     color: var(--color-ligth);
     font-size: 1.4rem;
 }
 
-.stats_container div h4{
+.stats_container div:nth-child(4) h4{
     font-size: 1.2rem;
     color: var(--color-ligth);
 }
@@ -170,13 +168,25 @@
     grid-column-start: 2;
     grid-column-end: 3;
     width: 100%;
+    min-width: 50%;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
     padding: 1rem;
-    padding-top: 0;
     z-index: 1;
+    border: 2px solid;
+}
+
+.card .general h1 {
+    border: 2px solid red;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.card .general p {
+    border: 2px solid red;
+    margin-top: 2rem;
 }
 
 .card .general .more{
@@ -184,6 +194,7 @@
     bottom: 1rem;
     right: 1rem;
     font-size: 1rem;
+    border: 2px solid;
 }
 
 /* Card:Hover Effects */
@@ -216,6 +227,7 @@
         grid-row-end: 2;
         width: 100%;
         min-width: 50%;
+        height: 8rem;
         display: grid;
         grid-template-rows: 0.5fr 0.5fr ;
         grid-template-columns: 2fr 0.5fr;
@@ -223,18 +235,29 @@
             "title icon"
             "points icon"
         ;
+        gap: 1rem;
+        border-right: none;
     }
 
-    .proyect-card .proyect-name {
+    .card .proyect-card .proyect-name {
         grid-area: title;
+        width: 75%;
+        justify-self: center;
+        margin-top: 1rem;
     }
 
-    .proyect-card .icon-container {
+    .card .proyect-card .icon-container {
         grid-area: icon;
+        width: 7rem;
+        height: 7rem;
+        margin-bottom: 0.4rem;
     }
 
-    .proyect-card .points {
+    .card .proyect-card .points {
         grid-area: points;
+        width: 75%;
+        justify-self: center;
+        margin-bottom: 1rem;
     }
 
     .card .more-info {
@@ -248,7 +271,28 @@
     }
 
     .card  .more-info .img-container{
-        height: 11rem;
+        width: 80%;
+        min-width: 70%;
+        height: 14rem;
+    }
+
+    .card .more-info .stats_container {
+        height: 6.4rem;
+        justify-content: space-evenly;
+        padding-top: 0.4rem;
+    }
+
+    .stats_container div {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .stats_container div .title{
+        font-size: 1.2rem;
+    }
+
+    .stats_container div:nth-child(4) h4{
+        font-size: 1rem;
     }
 
     .card .general {
@@ -256,10 +300,44 @@
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
+
     }
 
     /* Card:Hover Effects */
     .card:hover .more-info{
         height: 100%;
+    }
+}
+
+@media (max-width: 475px) {
+
+    .card .proyect-card .proyect-name {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .card .proyect-card .icon-container {
+        width: 6.8rem;
+        height: 6.8rem;
+        margin-bottom: 0rem;
+    }
+
+    .card .proyect-card .points{
+        font-size: 1rem;
+        width: 92%;
+    }
+
+    .card  .more-info .img-container{
+        width: 90%;
+        height: 14rem;
+    }
+
+    .card .more-info .stats_container {
+        /* height: 6.4rem; */
+    }
+
+    .stats_container div .stats_img {
+        width: 3rem;
+        height: 3rem;
     }
 }
