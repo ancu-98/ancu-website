@@ -7,13 +7,13 @@ import proyectsIcon from '/src/assets/img/briefcase-account.svg'
 import emailIcon from '/src/assets/img/mail-flash.svg'
 
 const list = [
-    {id: 1, img: homeIcon, title: 'Home'},
-    {id: 2, img: userIcon, title: 'About'},
-    {id: 3, img: proyectsIcon, title: 'Proyects'},
-    {id: 4, img: emailIcon, title: 'Contact'}
+    { id: 1, img: homeIcon, title: 'Home' },
+    { id: 2, img: userIcon, title: 'About' },
+    { id: 3, img: proyectsIcon, title: 'Proyects' },
+    { id: 4, img: emailIcon, title: 'Contact' }
 ]
 
-const NavBar = ({ handleTab }) => {
+const NavBar = ({ handleTab, toggleValue }) => {
 
     const [activeItem, setActiveItem] = useState(null)
 
@@ -29,6 +29,17 @@ const NavBar = ({ handleTab }) => {
         listRef.current[index] = item;
     }
 
+    /* Function to execute two states (show y activeItem )*/
+
+    const [ejemplo, setEjemplo] = useState(0)
+
+    const handleChange = (item, number) => {
+        handleClick(item)
+        setEjemplo(number)
+    }
+
+    console.log(activeItem)
+    console.log(ejemplo)
 
     return (
         <nav className='navBar__container-all'>
@@ -57,10 +68,12 @@ const NavBar = ({ handleTab }) => {
                         <img src="/src/assets/img/mail-flash.svg" alt="logo_contact" />
                     </a>
                 </button>
-                <label className='switch'>
-                    <input type="checkbox" />
-                    <span className='slider_nav'></span>
-                </label>
+                <button className='button__switch' onClick={toggleValue}>
+                    <label className='switch'>
+                        <input type="checkbox" />
+                        <span className='slider_nav'></span>
+                    </label>
+                </button>
             </div>
 
             <div className='navBar__container-mobile'>
@@ -72,7 +85,7 @@ const NavBar = ({ handleTab }) => {
                                     key={item.id}
                                     ref={() => updateRefs(item, index)}
                                     className={item.id === activeItem ? 'active' : ''}
-                                    onClick={() => handleClick(item)}
+                                    onClick={() => handleChange(item, item.id)}
                                 >
                                     <a href="#" className='item-li'>
                                         <span className='icon'>
@@ -85,7 +98,8 @@ const NavBar = ({ handleTab }) => {
                         }
                         <div className='indicator'></div>
                     </ul>
-                    <label className='switch'>
+
+                    <label className='switch' >
                         <input type="checkbox" />
                         <span className='slider_nav'></span>
                     </label>

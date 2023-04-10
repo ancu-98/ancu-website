@@ -23,7 +23,7 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
 
-.container_box .box__header{
+.container_box .box__header {
     border-radius: 18px 18px 0px 0px;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -32,12 +32,93 @@
     backdrop-filter: blur(3px);
 }
 
+/* Efecto de switch .container_box */
+/* desktop */
+/* open efect */
+.outside {
+    -webkit-animation: scale-up-tr 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) NaNs backwards;
+    animation: scale-up-tr 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) NaNs backwards;
+}
+
+@-webkit-keyframes scale-up-tr {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+}
+
+@keyframes scale-up-tr {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+}
+
+/* close efect */
+
+.inside {
+    -webkit-animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+    animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+}
+
+@-webkit-keyframes scale-up-tr {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+}
+
+@keyframes scale-up-tr {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+}
+
+/* mobile */
+
 .main__card {
+    grid-row-start: 2;
+    grid-row-end: 3;
     border: 2px solid blue;
     position: absolute;
     z-index: 200;
-    grid-row-start: 2;
-    grid-row-end: 3;
     /* z-index: 20; */
     opacity: 0.6;
     background-color: #d3d3d3;
@@ -56,12 +137,12 @@
     width: 98%;
     height: 98%;
     padding: 0.4rem;
-    background-color: #c0c0c0 ;
+    background-color: #c0c0c0;
     /* background: transparent;  */
     border-radius: 0.8rem;
 }
 
-.main__card .two{
+.main__card .two {
     width: 100%;
     height: 100%;
     padding: 0.4rem;
@@ -72,7 +153,7 @@
     background-color: #9c9c9c;
 }
 
-.main__card .three{
+.main__card .three {
     /* position: absolute;
     z-index: 50; */
     width: 100%;
@@ -85,7 +166,7 @@
     background-color: #797979;
 }
 
-.main__card .four{
+.main__card .four {
     /* position: relative; */
     /* z-index: 60; */
     opacity: 0.8;
@@ -99,7 +180,7 @@
     background-color: #5a5a5a;
 }
 
-.main__card .five{
+.main__card .five {
     /* position: relative; */
     /* z-index: 80; */
     width: 100%;
@@ -113,7 +194,7 @@
     background-color: #424242;
 }
 
-.main__card .six{
+.main__card .six {
     /* position: relative; */
     /* z-index: 90; */
     width: 100%;
@@ -147,26 +228,26 @@
     transition: 0.4s;
 }
 
-.main__card:hover .three{
+.main__card:hover .three {
     opacity: 0.8;
     transition: 0.5s;
 }
 
-.main__card:hover .four{
+.main__card:hover .four {
     opacity: 0.8;
     transition: 0.6s;
 }
 
-.main__card:hover .five{
+.main__card:hover .five {
     opacity: 0.8;
     transition: 0.7s;
 }
 
-.six p{
+.six p {
     border: 2px solid;
 }
 
-.main__card:hover .six{
+.main__card:hover .six {
     opacity: 0.8;
     transition: 0.8s;
 }
@@ -203,12 +284,12 @@
     background-color: #302f2f; /* O el color que desees aplicar a los contenedores one, two, three, four, five, six cuando están en hover 
 } */
 
-.main__card:hover p{
+.main__card:hover p {
     opacity: 0;
 }
 
 
-.main__card p{
+.main__card p {
     position: absolute;
     opacity: 1;
 }
@@ -238,23 +319,22 @@
 /* mobile */
 
 @media (max-width: 600px) {
-    .container_setup .container_box{
+    .container_setup .container_box {
         grid-template-rows: 2fr 0.2fr;
     }
 
-    .container_box .box__header{
+    .container_box .box__header {
         grid-row-start: 2;
         grid-row-end: 3;
     }
 
-    .container_box .main__card{
+    .container_box .main__card {
         grid-row-start: 1;
         grid-row-end: 2;
     }
 
-    .container_box .main__container{
+    .container_box .main__container {
         grid-row-start: 1;
         grid-row-end: 2;
     }
 }
-

@@ -8,6 +8,7 @@ import './styles/setUpMenu.css'
 
 const SetUpMenu = () => {
 
+    /* Render Sections */
     const [show, setShow] = useState(0)
 
     const handleTab = (e) => {
@@ -16,14 +17,28 @@ const SetUpMenu = () => {
 
     console.log(show)
 
+    /* Switch Button (.container_box efect) */
+    const [isToggle, setIsToggle] = useState(false)
+
+    const toggleValue = () => {
+        isToggle ? setIsToggle(false) : setIsToggle(true)
+    }
+
+    console.log(isToggle)
+
     return (
         <div className='container_setup' >
-            <div className='container_box' >
+            <div className={`container_box ${isToggle ? 'outside' : 'inside' }`} >
                 <header className='box__header' >
                     <NavBar
                         handleTab={handleTab}
+                        toggleValue={toggleValue}
                     />
                 </header>
+
+                {/* <div className={isToggle ? 'class_one' : 'class_two'} >
+                    <p>este es un ej</p>
+                </div> */}
 
                 <div className='main__card'>
                     <p>Come Deeper</p>
