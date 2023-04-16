@@ -52,54 +52,54 @@ const allProyects = [
         title_description: '',
         description: ''
     },
-    {
-        id: 45,
-        name_proyect: 'Chat API',
-        icon_proyect: '',
-        img_proyect: '',
-        github_link: 'https://github.com/ancu-98/Chat_API.git',
-        deploy_link: '',
-        documentation_link: '',
-        type: 'Backend',
-        title_description: '',
-        description: ''
-    },
-    {
-        id: 46,
-        name_proyect: 'Protected Routes',
-        icon_proyect: '',
-        img_proyect: '',
-        github_link: 'https://github.com/ancu-98/users_protected_router',
-        deploy_link: '',
-        documentation_link: '',
-        type: 'Backend',
-        title_description: '',
-        description: ''
-    },
-    {
-        id: 47,
-        name_proyect: 'Spaghetti Users',
-        icon_proyect: '',
-        img_proyect: '',
-        github_link: 'https://github.com/ancu-98/spaghetti_users.git',
-        deploy_link: '',
-        documentation_link: '',
-        type: 'Backend',
-        title_description: 'notion sheiko',
-        description: ''
-    },
-    {
-        id: 46,
-        name_proyect: 'CRUD Usuarios',
-        icon_proyect: '',
-        img_proyect: '',
-        github_link: 'https://github.com/ancu-98/api_users',
-        deploy_link: '',
-        documentation_link: '',
-        type: 'Backend',
-        title_description: '',
-        description: ''
-    }
+    // {
+    //     id: 45,
+    //     name_proyect: 'Chat API',
+    //     icon_proyect: '',
+    //     img_proyect: '',
+    //     github_link: 'https://github.com/ancu-98/Chat_API.git',
+    //     deploy_link: '',
+    //     documentation_link: '',
+    //     type: 'Backend',
+    //     title_description: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 46,
+    //     name_proyect: 'Protected Routes',
+    //     icon_proyect: '',
+    //     img_proyect: '',
+    //     github_link: 'https://github.com/ancu-98/users_protected_router',
+    //     deploy_link: '',
+    //     documentation_link: '',
+    //     type: 'Backend',
+    //     title_description: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 47,
+    //     name_proyect: 'Spaghetti Users',
+    //     icon_proyect: '',
+    //     img_proyect: '',
+    //     github_link: 'https://github.com/ancu-98/spaghetti_users.git',
+    //     deploy_link: '',
+    //     documentation_link: '',
+    //     type: 'Backend',
+    //     title_description: 'notion sheiko',
+    //     description: ''
+    // },
+    // {
+    //     id: 48,
+    //     name_proyect: 'CRUD Usuarios',
+    //     icon_proyect: '',
+    //     img_proyect: '',
+    //     github_link: 'https://github.com/ancu-98/api_users',
+    //     deploy_link: '',
+    //     documentation_link: '',
+    //     type: 'Backend',
+    //     title_description: '',
+    //     description: ''
+    // }
 ]
 
 export default allProyects

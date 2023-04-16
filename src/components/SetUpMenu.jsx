@@ -34,7 +34,7 @@ const SetUpMenu = () => {
                         <NavBar handleTab={handleTab} />
                     </header>
 
-                    <div className='main__card'>
+                    {/* <div className='main__card'>
                         <div className="one">
                             <div className="thwo">
                                 <div className="three">
@@ -48,7 +48,7 @@ const SetUpMenu = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className='main__container'>
                         <div className={show === 1 ? 'home__container' : 'inactive'}>

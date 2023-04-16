@@ -143,8 +143,8 @@
     margin-left: 1.3em;
     padding: 0.4em;
     background: transparent;
-    backdrop-filter: blur(2px);
-    border-radius: 0.8rem solid var(--color-ligth);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem solid var(--color-ligth);
 }
 
 .input_group :is(input:focus, input:valid),

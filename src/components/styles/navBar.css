@@ -235,9 +235,9 @@
         content: "";
         position: absolute;
         top: 50%;
-        left: -72%;
+        left: -71%;
         width: 21px;
-        height: 14px;
+        height: 12px;
         background: transparent;
         border-top-right-radius: 21px;
         box-shadow: 0.3rem -0.2rem 0 0rem var(--color-ligth);
@@ -247,13 +247,12 @@
         content: "";
         position: absolute;
         top: 50%;
-        right: -74%;
-        width: 21px;
-        min-width: 12px;
-        height: 14px;
+        right: -52%;
+        width: 14px;
+        height: 12px;
         background: transparent;
         border-top-left-radius: 21px;
-        box-shadow: -0.3rem -0.2rem 0rem 0rem  var(--color-ligth);
+        box-shadow: -0.2rem -0.2rem 0rem 0rem var(--color-ligth);
     }
 
     .navBar__container-button-list .indicator {

@@ -12,6 +12,6 @@
     align-items: center;
     width: 100%;
     min-width: 50%;
-    border-bottom: 2px solid var(--thumb_color);
+    border-bottom: 1px solid var(--color-ligth);
     /* border: 2px solid yellow; */
 }

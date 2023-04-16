@@ -23,7 +23,7 @@ const ParticleComp = (props) => {
                 events: {
                     onClick: {
                         enable: true, // enables the click event
-                        mode: "push", // adds the particles on click
+                        mode: "repulse", // adds the particles on click
                     },
                     onHover: {
                         enable: true, // enables the hover event

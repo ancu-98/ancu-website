@@ -49,7 +49,7 @@
     align-items: center;
     gap: 14px;
     padding: 0 16px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.8rem 0px 0rem 0.4rem;
     /* z-index: 4; */
 }

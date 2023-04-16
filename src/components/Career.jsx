@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import { platzi, academlo, university } from '../utils/about.js'
 
 
-const platzi_logo = 'https://static.platzi.com/media/platzi-isotipo@2x.png'
 
 const Career = () => {
 
@@ -48,6 +47,7 @@ const Career = () => {
     };
 
     const fullstack = 'https://certificates.academlo.com/en/verify/38317332478453'
+    const platzi_logo = 'https://static.platzi.com/media/platzi-isotipo@2x.png'
 
     return (
         <div className='career_container'>
