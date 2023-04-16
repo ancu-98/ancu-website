@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './styles/home.css'
+import Typed from 'typed.js'
+import { useEffect } from 'react';
 
 const Home = () => {
 
-    const frases = [
-        "Hi! I'm Ancu_98",
-        "I'm from Colombia!",
-    ]
+    const el = useRef(null);
 
-    const vistaFrases = (frases) => {
-        for (let i = 0; i < frases.length; i++) {
-            return frases[i];
-        }
-    }
+    useEffect(() => {
+        const typed = new Typed(el.current, {
+            strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+            startDelay: 300,
+            typeSpeed: 30,
+            backDelay: 150,
+            backSpeed: 150,
+            smartBackspace: true,
+            showCursor: false,
+            loop: true
+        })
 
+        return () => {
+            // Destroy Typed instance during cleanup to stop animation
+             typed.destroy();
+         };
+    });
 
     return (
         <div className="container">
@@ -24,7 +34,7 @@ const Home = () => {
                         <button className="btn"></button>
                         <button className="btn"></button>
                     </div>
-                    <p className="user">ancu_98@admin: ~</p>
+                    <p className="user">ancu_98 website</p>
                 </div>
                 <div className="terminal_body">
                     <div className="terminal_promt">
@@ -32,7 +42,7 @@ const Home = () => {
                         <span className="terminal_location">~</span>
                         <span className="terminal_bling">$</span>
                         <div className="terminal_efect">
-                            <span>{frases}</span>
+                            <span ref={el}></span>
                         </div>
                     </div>
                 </div>
@@ -40,7 +50,7 @@ const Home = () => {
             <div className='button_scene'>
                 <div className='cube'>
                     <div className='side top'>
-                        <img className='icon' src="/src/assets/img/github.svg" alt="github-icon" />
+                        <img className='icon' src="/src/assets/img/github1.svg" alt="github-icon" />
                         <img className='icon' src="/src/assets/img/play.svg" alt="play-icon" />
                         <img className='icon' src="/src/assets/img/zap.svg" alt="zap-icon" />
                     </div>

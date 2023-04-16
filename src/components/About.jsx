@@ -12,6 +12,8 @@ const About = () => {
         setShow(e)
     }
 
+    const linkedIn = 'https://www.linkedin.com/in/sebastian-bernal-b808a9255/';
+
     return (
         <div className="about_container">
             <div className="card_about">
@@ -33,7 +35,9 @@ const About = () => {
 
                     <div className="about_buttons">
                         <button>
-                            <img src="/src/assets/img/linkedin.svg" alt="linkedin-icon" />
+                            <a href={linkedIn} target='_blank'>
+                                <img src="/src/assets/img/linkedin.svg" alt="linkedin-icon" />
+                            </a>
                         </button>
                         <button>
                             <img src="/src/assets/img/address-card.svg" alt="curriculum-icon" />
@@ -50,13 +54,13 @@ const About = () => {
             </div>
 
             <div className='card__content'>
-                <div className={show===1 ? 'card_skills_container' : 'inactive_about'}>
+                <div className={show === 1 ? 'card_skills_container' : 'inactive_about'}>
                     <Skills />
                 </div>
-                <div className={show===2 ? 'card_aboutMe_container' : 'inactive_about'}>
+                <div className={show === 2 ? 'card_aboutMe_container' : 'inactive_about'}>
                     <AboutMe />
                 </div>
-                <div className={show===3 ? 'card_career_container' : 'inactive_about'}>
+                <div className={show === 3 ? 'card_career_container' : 'inactive_about'}>
                     <Career />
                 </div>
             </div>

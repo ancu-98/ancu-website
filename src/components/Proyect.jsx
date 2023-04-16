@@ -15,7 +15,7 @@ const Proyect = ({ nameProyect, iconProyect, imgProyect, gitHubLink, deployLink,
                     <img src={iconProyect} alt="icon-proyect" />
                 </div>
                 <div className="points">
-                    5,312 Points
+                    Pointer
                 </div>
             </div>
 

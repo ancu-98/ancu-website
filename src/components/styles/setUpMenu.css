@@ -4,7 +4,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+}
+
+.container_all {
+    /* border: 2px solid yellow; */
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container_setup .container_box {
@@ -16,6 +25,7 @@
     height: 90%;
     width: 90%;
     max-width: 80em;
+    max-height: 60em;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 20px;
@@ -34,16 +44,19 @@
 
 /* Efecto de switch .container_box */
 /* desktop */
+
 /* open efect */
-.outside {
-    -webkit-animation: scale-up-tr 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) NaNs backwards;
-    animation: scale-up-tr 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) NaNs backwards;
+
+.open {
+    -webkit-animation: scale-up-tr 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+    animation: scale-up-tr 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
 }
 
 @-webkit-keyframes scale-up-tr {
     0% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        opacity: 0;
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
@@ -58,8 +71,9 @@
 
 @keyframes scale-up-tr {
     0% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        opacity: 0;
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
@@ -71,18 +85,20 @@
         transform-origin: 100% 0%;
     }
 }
+
 
 /* close efect */
 
-.inside {
-    -webkit-animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
-    animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+.close {
+    -webkit-animation: scale-up-close 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+    animation: scale-up-close 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
 }
 
-@-webkit-keyframes scale-up-tr {
+@-webkit-keyframes scale-up-close {
     0% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        opacity: 0;
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
@@ -95,10 +111,11 @@
     }
 }
 
-@keyframes scale-up-tr {
+@keyframes scale-up-close {
     0% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        opacity: 0;
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
@@ -111,46 +128,44 @@
     }
 }
 
-/* mobile */
+
 
 .main__card {
     grid-row-start: 2;
     grid-row-end: 3;
-    border: 2px solid blue;
-    position: absolute;
-    z-index: 200;
-    /* z-index: 20; */
-    opacity: 0.6;
-    background-color: #d3d3d3;
-    /* background: transparent; */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* opacity: 0.6; */
+    background-color: var(--color-rgba-border);
     width: 90%;
     height: 90%;
     border-radius: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.6;
 }
 
 .main__card .one {
-    border: 2px solid black;
-    opacity: 0.6;
+    border: 4px solid var(--color-rgba-border);
     width: 98%;
     height: 98%;
     padding: 0.4rem;
     background-color: #c0c0c0;
     /* background: transparent;  */
     border-radius: 0.8rem;
+    opacity: 0.8;
 }
 
 .main__card .two {
+    border: 1px solid var(--color-rgba-border);
     width: 100%;
     height: 100%;
     padding: 0.4rem;
-    opacity: 0.8;
     border-radius: 0.8rem;
     transition: 1s;
     transition-delay: 0.2s;
     background-color: #9c9c9c;
+    opacity: 0;
 }
 
 .main__card .three {
@@ -159,17 +174,16 @@
     width: 100%;
     height: 100%;
     padding: 0.4rem;
-    opacity: 0;
     border-radius: 0.8rem;
     transition: 0.9s;
     transition-delay: 0.2s;
     background-color: #797979;
+    opacity: 0;
 }
 
 .main__card .four {
     /* position: relative; */
     /* z-index: 60; */
-    opacity: 0.8;
     width: 100%;
     height: 100%;
     padding: 0.4rem;
@@ -178,6 +192,7 @@
     transition: 0.8s;
     transition-delay: 0.2s;
     background-color: #5a5a5a;
+    opacity: 0;
 }
 
 .main__card .five {
@@ -186,12 +201,12 @@
     width: 100%;
     height: 100%;
     padding: 0.4rem;
-    opacity: 0.8;
     color: #ececec;
     border-radius: 0.8rem;
     transition: 0.7s;
     transition-delay: 0.2s;
     background-color: #424242;
+    opacity: 0;
 }
 
 .main__card .six {
@@ -200,31 +215,41 @@
     width: 100%;
     height: 100%;
     padding: 0.4rem;
-    opacity: 0.8;
     color: #ececec;
     border-radius: 0.8rem;
     transition: 0.6s;
     transition-delay: 0.2s;
     background-color: #302f2f;
+    opacity: 0;
 }
 
 /* https://www.1keydata.com/css-tutorial/z-index.php*/
 
+/* .main__container  */
+
 .main__container {
     position: absolute;
-    z-index: 300;
+    /* z-index: 300; */
     grid-row-start: 2;
     grid-row-end: 3;
-    top: 10%;
+    /* top: 10%; */
     opacity: 1;
     transition: 0.2s;
-    border: 2px solid red;
-    width: 80%;
-    height: 80%;
+    border: 1px solid var(--thumb_color);
+    border-radius: 0.8rem;
+    width: 82%;
+    height: 77%;
+    overflow-x: hidden;
 }
 
-.main__card:hover .two {
-    opacity: 0.8;
+/*El :hover va sobre .main__container pero no se aplica */
+.main__container:hover .one {
+    opacity: 0.8 ;
+    transition: 0.3s;
+}
+
+.main__container:hover .two {
+    opacity: 1;
     transition: 0.4s;
 }
 
@@ -244,7 +269,11 @@
 }
 
 .six p {
-    border: 2px solid;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    /* aqí se modifica el heigth del contenedor */
+    min-height: 53.4vh;
 }
 
 .main__card:hover .six {
@@ -252,51 +281,19 @@
     transition: 0.8s;
 }
 
-.main__card:hover .main__container {
+/* .main__card:hover .main__container {
     opacity: 1;
     transition-delay: 0.5s;
-}
-
-
-/* Intento de hacer que el .main__container se vea transparente
-
-.main__card:hover .main__container{
-    background: transparent;
-}
-
-.two:hover ~ .main__container {
-    background-color: #9c9c9c;
-}
-
-.three:hover ~ .main__container {
-    background-color: #797979;
-}
-
-.four:hover ~ .main__container {
-    background-color: #5a5a5a;
-}
-
-.five:hover ~ .main__container {
-    background-color: #424242;
-}
-
-.six:hover ~ .main__container {
-    background-color: #302f2f; /* O el color que desees aplicar a los contenedores one, two, three, four, five, six cuando están en hover 
 } */
 
-.main__card:hover p {
+/* .main__container:hover p {
     opacity: 0;
-}
-
-
-.main__card p {
-    position: absolute;
-    opacity: 1;
-}
+} */
 
 .home__container {
-    border: 2px solid yellow;
-    padding: 16px;
+    /* border: 2px solid yellow; */
+    width: 100%;
+    height: 100%;
 }
 
 .about__container {
@@ -309,16 +306,111 @@
 
 .contact__container {
     border: 2px solid black;
-    padding: 16px;
 }
 
 .inactive {
     display: none;
 }
 
+/* switch */
+
+.switch {
+    /* Variables */
+    --switch_width: 2em;
+    --switch_height: 1em;
+    /* justify-self: center; */
+    position: absolute;
+    font-size: 1.6rem;
+    top: calc(9% + 2.4rem);
+    left: calc(50% + 35rem);
+    width: 4rem;
+    height: 4rem;
+    z-index: 100;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.8rem;
+    backdrop-filter: blur(4px);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider_nav */
+.slider_nav {
+    width: var(--switch_width);
+    height: var(--switch_height);
+    border: 2px solid var(--outline_color);
+    position: absolute;
+    cursor: pointer;
+    top: 24%;
+    left: 2%;
+    right: 0;
+    bottom: 0;
+    background-color: var(--track_color);
+    transition: .15s;
+    border-radius: var(--switch_height);
+}
+
+.slider_nav:before {
+    position: absolute;
+    content: "";
+    height: var(--switch_height);
+    width: var(--switch_height);
+    border: 2px solid var(--outline_color);
+    border-radius: 100%;
+    left: -2px;
+    bottom: -2px;
+    background-color: var(--thumb_color);
+    transform: translateY(-0.2em);
+    box-shadow: 0 0.2em 0 var(--outline_color);
+    transition: .15s;
+}
+
+input:checked+.slider_nav {
+    background-color: var(--track_active_color);
+}
+
+input:focus-visible+.slider_nav {
+    box-shadow: 0 0 0 2px var(--track_active_color);
+}
+
+/* Raise thumb when hovered */
+input:hover+.slider_nav:before {
+    transform: translateY(-0.3em);
+    box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+input:checked+.slider_nav:before {
+    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+}
+
+/* Raise thumb when hovered & checked */
+input:hover:checked+.slider_nav:before {
+    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+    box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+
+
+/* Desktop */
+@media (max-width: 1300px) {
+    .switch {
+        top: calc(7% + 2.4rem);
+        left: calc(50% + 34%);
+    }
+}
+
 /* mobile */
 
 @media (max-width: 600px) {
+    .container_all {
+        width: 100%;
+        height: 100%;
+    }
+
     .container_setup .container_box {
         grid-template-rows: 2fr 0.2fr;
     }
@@ -326,6 +418,7 @@
     .container_box .box__header {
         grid-row-start: 2;
         grid-row-end: 3;
+        border-radius: 0px 0px 18px 18px;
     }
 
     .container_box .main__card {
@@ -333,8 +426,107 @@
         grid-row-end: 2;
     }
 
+    /* Open .container_box effect*/
+    .open {
+        -webkit-animation: scale-up-br 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+        animation: scale-up-br 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+    }
+
+    @-webkit-keyframes scale-up-br {
+        0% {
+            -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+            opacity: 0;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+    }
+
+    @keyframes scale-up-br {
+        0% {
+            -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+            opacity: 0;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+    }
+
+    /* Close .container_box effect*/
+    .close {
+        -webkit-animation: scale-up-close 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) reverse both;
+        animation: scale-up-close 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) reverse both;
+    }
+
+    @-webkit-keyframes scale-up-close {
+        0% {
+            -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+            opacity: 0;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+    }
+
+    @keyframes scale-up-close {
+        0% {
+            -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+            opacity: 0;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+    }
+
     .container_box .main__container {
         grid-row-start: 1;
         grid-row-end: 2;
+        width: 76%;
+        /* height: 77%; */
+    }
+
+    .switch {
+        top: calc(80% + 2.6rem);
+        left: calc(50% + 35.4%);
+    }
+}
+
+@media (max-width: 475px) {
+    .switch {
+        left: calc(50% + 34%);
+    }
+}
+
+@media (max-width: 375px) {
+    .switch {
+        left: calc(40% + 43%);
     }
 }

@@ -1,16 +1,16 @@
 .career_container {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     width: 100%;
     min-width: 50%;
     display: grid;
-    grid-template-rows: 1fr 0.7fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     place-items: center;
 }
 
 .academlo_container {
     grid-row-start: 1 ;
     grid-row-end:2;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@
         "logo button"
         "certificate certificate";
     place-items: center;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
 }
 
 .academlo_card_logo {
@@ -88,6 +88,8 @@
     background-size: 200% 100%;
     background-position: 100% 0;
     animation: load89234 3s infinite;
+    text-decoration: none;
+    color: var(--color-black);
 }
 
 @keyframes load89234 {
@@ -136,7 +138,6 @@
     height: 100%;
     padding: 0.4rem;
     opacity: 1;
-    visibility: visible;
     /* transform: translateY(0); */
     transition: all 1s ease;
     border: 0.08em solid var(--color-ligth);
@@ -144,6 +145,7 @@
     border-top: none;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     place-items: center;
     overflow-x: hidden;
     backdrop-filter: blur(4px);
@@ -163,7 +165,7 @@
 }
 
 .academlo_certificates {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 100%;
 }
 
@@ -217,9 +219,10 @@
 }
 
 .slider_platzi {
-    border: 2px solid black;
+    /* border: 2px solid black;  */
     width: 90%;
     min-width: 30%;
+    /* height: 34rem; */
 }
 
 .slider_platzi .slider_container {
@@ -231,7 +234,7 @@
 }
 
 .platzi__item {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     width: 100%;
     height: 120px;
     padding: 6px;
@@ -241,7 +244,7 @@
 .university_card_container {
     grid-row-start: 3 ;
     grid-row-end: 4;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -305,9 +308,8 @@
 @media (max-width: 600px) {
 
     .career_container {
-        grid-template-rows: 3fr 1.8fr 3fr;
+        grid-template-rows: 3fr 2.8fr 3fr;
     }
-
 
     .academlo_card_container {
         grid-template-rows: 1fr 1fr;
@@ -347,6 +349,14 @@
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 4;
+    }
+
+    .slider_platzi_container .slider_platzi{
+        height: 12rem;
+    }
+
+    .slider_platzi .slider_container .slick-slider .slick-dots {
+        bottom: -44px;
     }
 
     .university_card {

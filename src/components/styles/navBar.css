@@ -8,14 +8,12 @@
     border-bottom: 1px solid var(--color-rgba-border);
     display: flex;
     justify-content: center;
-    align-content: center;
 }
 
 .navBar__container-setup{
     display: flex;
     justify-content: center;
-    align-content: center;
-    gap: 12px;
+    gap: 1.2rem;
 }
 
 
@@ -68,89 +66,6 @@
     height: 24px;
 }
 
-/* switch */
-/* The switch - the box around the slider_nav */
-.button__switch {
-    border: 2px solid blue;
-    width: 80%;
-    position: relative;
-    right: calc(50% - 64%);
-}
-
-.switch {
-    /* Variables */
-    --switch_width: 2em;
-    --switch_height: 1em;
-    /* justify-self: center; */
-    position: absolute;
-    font-size: 17px;
-    bottom: 1rem;
-    /* left: calc(50% + 14%); */
-    width: var(--switch_width);
-    height: var(--switch_height);
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The slider_nav */
-.slider_nav {
-    border: 2px solid var(--outline_color);
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--track_color);
-    transition: .15s;
-    border-radius: var(--switch_height);
-}
-
-.slider_nav:before {
-    position: absolute;
-    content: "";
-    height: var(--switch_height);
-    width: var(--switch_height);
-    border: 2px solid var(--outline_color);
-    border-radius: 100%;
-    left: -2px;
-    bottom: -2px;
-    background-color: var(--thumb_color);
-    transform: translateY(-0.2em);
-    box-shadow: 0 0.2em 0 var(--outline_color);
-    transition: .15s;
-}
-
-input:checked+.slider_nav {
-    background-color: var(--track_active_color);
-}
-
-input:focus-visible+.slider_nav {
-    box-shadow: 0 0 0 2px var(--track_active_color);
-}
-
-/* Raise thumb when hovered */
-input:hover+.slider_nav:before {
-    transform: translateY(-0.3em);
-    box-shadow: 0 0.3em 0 var(--outline_color);
-}
-
-input:checked+.slider_nav:before {
-    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
-}
-
-/* Raise thumb when hovered & checked */
-input:hover:checked+.slider_nav:before {
-    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
-    box-shadow: 0 0.3em 0 var(--outline_color);
-}
-
-
 
 /* tablet */
 
@@ -192,6 +107,13 @@ input:hover:checked+.slider_nav:before {
 
 }
 
+
+@media (max-width: 680px) {
+    .navBar__container-setup {
+        width: 84%;
+        margin-right: 1rem;
+    }
+}
 
 
 /* mobile */
@@ -235,7 +157,7 @@ input:hover:checked+.slider_nav:before {
         display: flex;
         /* justify-content: space-evenly; */
         width: 100%;
-        /* border: 2px solid red; */
+         /* border: 2px solid red;  */
     }
 
     .navBar__container-button-list ul li{
@@ -261,10 +183,7 @@ input:hover:checked+.slider_nav:before {
 
     .navBar__container-button-list li .item-li .icon{
         position: relative;
-        display: block;
-        bottom: 0.6rem;
-
-
+        bottom: -0.6rem;
         font-size: 1.5rem;
         text-align: center;
         transition: 0.5s;
@@ -284,13 +203,14 @@ input:hover:checked+.slider_nav:before {
 
     .navBar__container-button-list ul li .item-li .text{
         position: absolute;
+        bottom: -3%;
         color: var(--color-ligth);
         font-weight: 400;
         font-size: 1.2rem;
         letter-spacing: 0.05em;
         transition: 0.5s;
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(22px);
     }
 
     .navBar__container-button-list ul li.active .item-li .text{
@@ -320,9 +240,6 @@ input:hover:checked+.slider_nav:before {
         height: 14px;
         background: transparent;
         border-top-right-radius: 21px;
-        /*En el color del boxshadow , debe de ir el color del background, o se al rgba del containerbox
-        igual que el color de borde alrededor del circulo
-        */
         box-shadow: 0.3rem -0.2rem 0 0rem var(--color-ligth);
     }
 
@@ -339,54 +256,48 @@ input:hover:checked+.slider_nav:before {
         box-shadow: -0.3rem -0.2rem 0rem 0rem  var(--color-ligth);
     }
 
+    .navBar__container-button-list .indicator {
+        opacity: 0;
+    }
+
     .navBar__container-button-list ul li:nth-child(1).active ~ .indicator {
-        transform: translateX(calc(10.8rem * 0)) ;
+        opacity: 1;
+        left: calc(100% / 4 / 2);
+        transform: translateX(-50%);
     }
-
     .navBar__container-button-list ul li:nth-child(2).active ~ .indicator {
-        transform: translateX(calc(10.8rem * 1)) ;
+        opacity: 1;
+        left: calc(((100% / 4) / 2) * (1 + 2 * 1) );
+        transform: translateX(-50%);
     }
-
     .navBar__container-button-list ul li:nth-child(3).active ~ .indicator {
-        transform: translateX(calc(10.8rem * 2)) ;
+        opacity: 1;
+        left: calc(((100% / 4) / 2) * (1 + 2 * 2) );
+        transform: translateX(-50%);
     }
-
     .navBar__container-button-list ul li:nth-child(4).active ~ .indicator {
-        transform: translateX(calc(10.8rem * 3)) ;
+        opacity: 1;
+        left: calc(((100% / 4) / 2) * (1 + 2 * 3) );
+        transform: translateX(-50%);
     }
 
     .navBar__container-all .switch{
         left: calc(50% + 40%);
         /* bottom: 2.4rem; */
+        border-radius: 0.6rem;
     }
 
 }
 
 @media (max-width: 475px) {
 
+    .navBar__container-button-list {
+        border: 2px solid;
+        margin-right: 2rem;
+    }
+
     .navBar__container-button-list ul .indicator{
         left: 6%;
-    }
-
-    .navBar__container-all .switch{
-        left: calc(50% + 39%);
-        /* bottom: 2.4rem; */
-    }
-
-    .navBar__container-button-list ul li:nth-child(1).active ~ .indicator {
-        transform: translateX(calc(9rem * 0)) ;
-    }
-
-    .navBar__container-button-list ul li:nth-child(2).active ~ .indicator {
-        transform: translateX(calc(8.8rem * 1)) ;
-    }
-
-    .navBar__container-button-list ul li:nth-child(3).active ~ .indicator {
-        transform: translateX(calc(8.8rem * 2)) ;
-    }
-
-    .navBar__container-button-list ul li:nth-child(4).active ~ .indicator {
-        transform: translateX(calc(8rem * 3)) ;
     }
 
 }
@@ -400,11 +311,6 @@ input:hover:checked+.slider_nav:before {
     .navBar__container-button-list ul .indicator::before {
         width: 16px;
         left: -58%;
-    }
-
-    .navBar__container-all .switch{
-        left: calc(50% + 38%);
-        /* bottom: 2.4rem; */
     }
 
 }

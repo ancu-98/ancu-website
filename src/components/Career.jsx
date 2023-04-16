@@ -47,6 +47,8 @@ const Career = () => {
         ]
     };
 
+    const fullstack = 'https://certificates.academlo.com/en/verify/38317332478453'
+
     return (
         <div className='career_container'>
             <div className='academlo_container'>
@@ -61,7 +63,7 @@ const Career = () => {
                         <div className="academlo_card_logo">
                             <img src="/src/assets/img/academlo_logo.jpg" alt="logo-academlo" />
                         </div>
-                        <div className='academlo_card_title'><h3>FULL STACK DEVELOPER</h3></div>
+                        <a href={fullstack} target='_blank' className='academlo_card_title'><h3>FULL STACK DEVELOPER </h3></a>
                         <div className='academlo_card_container_button'>
                             <button className='academlo_card_button' onClick={() => handleTap(!open)}>
                                 <img src="/src/assets/img/arrow-down-circle.svg" alt="drop-down-arrow" />
@@ -77,6 +79,7 @@ const Career = () => {
                                         curso={academloItem.curso}
                                         image={academloItem.image}
                                         description={academloItem.description}
+                                        certificate_link={academloItem.certificate_link}
                                     />
                                 </div>
                             ))
@@ -102,6 +105,7 @@ const Career = () => {
                                         <PlatziCard
                                             curso={platziCard.curso}
                                             image_url={platziCard.image_url}
+                                            certificate_link={platziCard.certificate_link}
                                         />
                                     </div>
                                 ))

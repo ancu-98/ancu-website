@@ -1,16 +1,17 @@
 .proyects_container{
-    border: 2px solid blueviolet;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(autofill, minmax(8rem, 16rem));
     gap: 2rem;
+    /* border: 2px solid blueviolet;  */
 }
 
 .proyects_container_cards {
-    border: 2px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-width: 50%;
+    border-bottom: 2px solid var(--thumb_color);
+    /* border: 2px solid yellow; */
 }

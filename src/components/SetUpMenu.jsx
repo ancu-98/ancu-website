@@ -18,58 +18,62 @@ const SetUpMenu = () => {
     console.log(show)
 
     /* Switch Button (.container_box efect) */
-    const [isToggle, setIsToggle] = useState(false)
+    const [isToggle, setIsToggle] = useState(true)
 
     const toggleValue = () => {
-        isToggle ? setIsToggle(false) : setIsToggle(true)
+        setIsToggle(!isToggle)
     }
 
     console.log(isToggle)
 
     return (
         <div className='container_setup' >
-            <div className={`container_box ${isToggle ? 'outside' : 'inside' }`} >
-                <header className='box__header' >
-                    <NavBar
-                        handleTab={handleTab}
-                        toggleValue={toggleValue}
-                    />
-                </header>
+            <div className='container_all'>
+                <div className={`container_box ${isToggle ? 'open' : 'close'}`} >
+                    <header className='box__header' >
+                        <NavBar handleTab={handleTab} />
+                    </header>
 
-                {/* <div className={isToggle ? 'class_one' : 'class_two'} >
-                    <p>este es un ej</p>
-                </div> */}
-
-                <div className='main__card'>
-                    <p>Come Deeper</p>
-                    <div className="one">
-                        <div className="thwo">
-                            <div className="three">
-                                <div className="four">
-                                    <div className="five">
-                                        <div className='six'>
-                                            <p>hola</p>
+                    <div className='main__card'>
+                        <div className="one">
+                            <div className="thwo">
+                                <div className="three">
+                                    <div className="four">
+                                        <div className="five">
+                                            <div className='six'>
+                                                <p>hola</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div className='main__container'>
-                    <div className={show === 1 ? 'home__container' : 'inactive'}>
-                        <Home />
+                    <div className='main__container'>
+                        <div className={show === 1 ? 'home__container' : 'inactive'}>
+                            <Home />
+                        </div>
+                        <div className={show === 2 ? 'about__container' : 'inactive'}>
+                            <About />
+                        </div>
+                        <div className={show === 3 ? 'proyects__container' : 'inactive'}>
+                            <Proyects />
+                        </div>
+                        <div className={show === 4 ? 'contact__container' : 'inactive'}>
+                            <Contact />
+                        </div>
                     </div>
-                    <div className={show === 2 ? 'about__container' : 'inactive'}>
-                        <About />
-                    </div>
-                    <div className={show === 3 ? 'proyects__container' : 'inactive'}>
-                        <Proyects />
-                    </div>
-                    <div className={show === 4 ? 'contact__container' : 'inactive'}>
-                        <Contact />
-                    </div>
+                </div>
+                <div className='options__container'>
+                    <label className='switch'>
+                        <input
+                            type="checkbox"
+                            onClick={toggleValue}
+                            checked={isToggle}
+                        />
+                        <span className='slider_nav'></span>
+                    </label>
                 </div>
             </div>
         </div>

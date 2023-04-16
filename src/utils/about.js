@@ -15,57 +15,68 @@ const platzi = [
     {
         id: 1,
         image_url: 'https://static.platzi.com/media/achievements/badge-basicojs-e2ead888-428e-4f55-962c-8894aeaeacda.png',
-        curso: 'Curso Básico de JavScript'
+        curso: 'Curso Básico de JavScript',
+        certificate_link: 'https://drive.google.com/file/d/13zTjB2ut2BwnklxKICvNOSpNBUjCkUmg/view?usp=share_link'
     },
     {
         id: 2,
         image_url: 'https://static.platzi.com/media/achievements/badge-css-grid-basico-5a5b5ab7-3cbb-4c7a-a15d-9f2719b56598.png',
-        curso: 'Curso de CSS Grid Básico'
+        curso: 'Curso de CSS Grid Básico',
+        certificate_link: 'https://drive.google.com/file/d/1F7CYqXojakTChPH21vdyvCZH7OeU-dwh/view?usp=share_link'
     },
     {
         id: 3,
         image_url: 'https://static.platzi.com/media/achievements/badges-html-css-afa64acb-64a4-486d-96a5-f930fbb7ee32.png',
-        curso: 'Curso Definitivo de HTML y CSS'
+        curso: 'Curso Definitivo de HTML y CSS',
+        certificate_link: 'https://drive.google.com/file/d/1SSMGtrsbO9o17Qz4R-W0bBHrNkZ99l4W/view?usp=share_link'
     },
     {
         id: 4,
         image_url: 'https://static.platzi.com/media/achievements/badge-curso-frontend-developer-825407d1-49b1-4c9b-90c4-eee793720ede.png',
-        curso: 'Curso de Frontend Developer'
+        curso: 'Curso de Frontend Developer',
+        certificate_link: 'https://drive.google.com/file/d/1mXX5rHYx5rwRchRp5Yk5F9yf4AgTn_sL/view?usp=share_link'
     },
     {
         id: 5,
         image_url: 'https://static.platzi.com/media/achievements/badge-curso-practico-frontend-developer-d28c2eb0-cd3e-4951-bb96-5f1bcab2add5.png',
-        curso: 'Curso Practico de Frontend Developer'
+        curso: 'Curso Practico de Frontend Developer',
+        certificate_link: ''
     },
     {
         id: 6,
         image_url: 'https://static.platzi.com/media/achievements/badge-ing-basico-a1-fechas-cca042ae-b01f-45aa-bc0f-5469ff035e5a.png',
-        curso: 'Curso de Inglés Básico A1: Fechas, Horas y Expresiones Simples'
+        curso: 'Curso de Inglés Básico A1: Fechas, Horas y Expresiones Simples',
+        certificate_link: 'https://drive.google.com/file/d/1XYqcmt-KU9saFEKbRG4lijgRoe4Fcja1/view?usp=share_link'
     },
     {
         id: 7,
         image_url: 'https://static.platzi.com/media/achievements/piezas-basic-english-course-beginners_badge-d884a9b2-fa4c-4821-b268-d4d5d0f10ab5.png',
-        curso: 'Curso de Inglés Básico A1 para Principiantes'
+        curso: 'Curso de Inglés Básico A1 para Principiantes',
+        certificate_link: 'https://drive.google.com/file/d/1wSHbDenny7W6N-6sjg8KadFrFKdzqD4W/view?usp=share_link'
     },
     {
         id: 8,
         image_url: 'https://static.platzi.com/media/achievements/piezas-curso-de-ingles-basico-a1-presente-simple-y-vocabulario-comun_badge-caf91072.png',
-        curso: 'Curso de Inglés Básico A1: Presente Simple y Vocabulario Común'
+        curso: 'Curso de Inglés Básico A1: Presente Simple y Vocabulario Común',
+        certificate_link: 'https://drive.google.com/file/d/1bUIM6cj0pHx1N6_nTLj2XgpVu1iEyrH5/view?usp=share_link'
     },
     {
         id: 9,
         image_url: 'https://static.platzi.com/media/achievements/piezas-basic-english-course-beginners_badge-4953fa05-f52d-4557-98e5-a64acf9f3827.png',
-        curso: 'Curso de Inglés Básico A1: Tus Primeras Conversaciones'
+        curso: 'Curso de Inglés Básico A1: Tus Primeras Conversaciones',
+        certificate_link: 'https://drive.google.com/file/d/1U4Pb7yrtlkfKGF2Vyk7b77Vq0u-QAplm/view?usp=share_link'
     },
     {
         id: 10,
         image_url: 'https://static.platzi.com/media/achievements/badge-ingles-basico-preguntas-respuestas-2022-f459ccdb-5a48-4073-986c-94fd3bf0676a.webp',
-        curso: 'Curso de Inglés Básico A2: Preguntas y Respuestas'
+        curso: 'Curso de Inglés Básico A2: Preguntas y Respuestas',
+        certificate_link: 'https://drive.google.com/file/d/1yKZwV8kC_329YPBqjqeEDbjlrUXy7Y-B/view?usp=share_link'
     },
     {
         id: 11,
         image_url: 'https://static.platzi.com/media/achievements/piezas-taller-ingles-principiantes_badge-1-56da5912-2828-48f3-9879-0ab93c1c3d3d.png',
-        curso: 'Taller de Inglés Básico A1: Descripciones Personales'
+        curso: 'Taller de Inglés Básico A1: Descripciones Personales',
+        certificate_link: 'https://drive.google.com/file/d/1aR9QrFy_IBJtiIZgTCnBTpKYjgr2lkC1/view?usp=share_link'
     }
 ]
 
@@ -74,19 +85,22 @@ const academlo = [
         id: 12,
         image: fundamentosLogo,
         curso: 'Fundamentos de Desarrollo Web',
-        description: 'The student obtained the necessary skills to correctly develop the visual part of a responsive website without using libraries/frameworks, as well as adding dynamic content with javascript, working collaboratively with git.'
+        description: 'The student obtained the necessary skills to correctly develop the visual part of a responsive website without using libraries/frameworks, as well as adding dynamic content with javascript, working collaboratively with git.',
+        certificate_link: 'https://certificates.academlo.com/en/verify/74170408084694'
     },
     {
         id: 13,
         image: reactLogo,
         curso: 'Desarrollo de Aplicaciones Web con React',
-        description: 'The student learned to create web applications with React JS, achieving great user interaction using previous knowledge of HTML, CSS and Javascript.'
+        description: 'The student learned to create web applications with React JS, achieving great user interaction using previous knowledge of HTML, CSS and Javascript.',
+        certificate_link: 'https://certificates.academlo.com/en/verify/55739408950709'
     },
     {
         id: 14,
         image: nodeLogo,
         curso: 'Backend con Node',
-        description: 'The student learned how to build a server-side application with Node and Express from 0 to deployment on a server. They will have the ability to build a Rest API using a relational database, user authentication, security against XSS and CSRF attacks, validate the data received by the server and build custom middlewares with Express.'
+        description: 'The student learned how to build a server-side application with Node and Express from 0 to deployment on a server. They will have the ability to build a Rest API using a relational database, user authentication, security against XSS and CSRF attacks, validate the data received by the server and build custom middlewares with Express.',
+        certificate_link: 'https://certificates.academlo.com/en/verify/64940983054018'
     }
 ]
 
