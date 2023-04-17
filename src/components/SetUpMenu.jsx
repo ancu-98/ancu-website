@@ -33,23 +33,7 @@ const SetUpMenu = () => {
                     <header className='box__header' >
                         <NavBar handleTab={handleTab} />
                     </header>
-
-                    {/* <div className='main__card'>
-                        <div className="one">
-                            <div className="thwo">
-                                <div className="three">
-                                    <div className="four">
-                                        <div className="five">
-                                            <div className='six'>
-                                                <p>hola</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-
+                    
                     <div className='main__container'>
                         <div className={show === 1 ? 'home__container' : 'inactive'}>
                             <Home />
@@ -64,6 +48,23 @@ const SetUpMenu = () => {
                             <Contact />
                         </div>
                     </div>
+
+                    <div className='main__card'>
+                        <div className="one">
+                            <div className="thwo">
+                                <div className="three">
+                                    <div className="four">
+                                        <div className="five">
+                                            <div className='six'>
+                                                <p>hola</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div className='options__container'>
                     <label className='switch'>

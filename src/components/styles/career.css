@@ -123,9 +123,6 @@
     background-color: var(--color-ligth);
 }
 
-.academlo_card_button.open img {
-    transform: rotate(180deg);
-}
 
 .academlo_card_button img {
     width: 100%;
@@ -134,6 +131,9 @@
     transition: transform 0.6s ease;
 }
 
+.academlo_card_button.open img {
+    transform: rotate(180deg);
+}
 
 
 /* modificar rotación del la imagen*/

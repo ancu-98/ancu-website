@@ -32,7 +32,17 @@ const NavBar = ({ handleTab }) => {
     return (
         <nav className='navBar__container-all'>
             <div className='navBar__container-setup'>
-                <button className='button__item' onClick={() => handleTab(1)}>
+                {
+                    list.map((item) => (
+                        <button className='button__item' onClick={() => handleTab(item.id)} >
+                            <a href="#" className='item'>
+                                <span >{item.title}</span>
+                                <img src={item.img} alt="item_logo" />
+                            </a>
+                        </button>
+                    ))
+                }
+                {/* <button className='button__item' onClick={() => handleTab(1)}>
                     <a href="#" className='item'>
                         <span>Home</span>
                         <img src="/src/assets/img/home.svg" alt="logo_Home" />
@@ -55,7 +65,7 @@ const NavBar = ({ handleTab }) => {
                         <span >Contact</span>
                         <img src="/src/assets/img/mail-flash.svg" alt="logo_contact" />
                     </a>
-                </button>
+                </button> */}
             </div>
 
             <div className='navBar__container-mobile'>

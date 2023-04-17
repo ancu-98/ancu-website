@@ -128,7 +128,9 @@
 }
 
 
-/* 
+/*--------------------------------------------------*/
+
+
 .main__card {
     grid-row-start: 2;
     grid-row-end: 3;
@@ -210,7 +212,9 @@
     transition-delay: 0.2s;
     background-color: #302f2f;
     opacity: 0;
-} */
+}
+
+/*--------------------------------------------------*/
 
 /* https://www.1keydata.com/css-tutorial/z-index.php*/
 
@@ -218,7 +222,7 @@
 
 .main__container {
     position: absolute;
-    /* z-index: 300; */
+    z-index: 300;
     grid-row-start: 2;
     grid-row-end: 3;
     /* top: 10%; */
@@ -228,7 +232,7 @@
     border-radius: 0.8rem;
     width: 82%;
     height: 77%;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 .main__container::-webkit-scrollbar {
@@ -242,45 +246,51 @@
     border-radius: 0.8rem;
 }
 
+
+/*--------------------------------------------------*/
+
 /*El :hover va sobre .main__container pero no se aplica */
-/* .main__card:hover .one {
+.main__container:hover ~ .main__card .one {
     opacity: 0.8 ;
     transition: 0.3s;
 }
 
-.main__card:hover .two {
+.main__container:hover ~ .main__card .two {
     opacity: 1;
     transition: 0.4s;
 }
 
-.main__card:hover .three {
+.main__container:hover ~ .main__card .three {
     opacity: 0.8;
     transition: 0.5s;
 }
 
-.main__card:hover .four {
+.main__container:hover ~ .main__card .four {
     opacity: 0.8;
     transition: 0.6s;
 }
 
-.main__card:hover .five {
+.main__container:hover ~ .main__card .five {
     opacity: 0.8;
     transition: 0.7s;
 }
+
 
 .six p {
     opacity: 1;
     width: 100%;
     height: 100%;
-    aquí se modifica el heigth del contenedor
+    /* aquí se modifica el heigth del contenedor */
     min-height: 53.4vh;
 }
 
 .main__card:hover .six {
     opacity: 0.8;
     transition: 0.8s;
-} */
+}
 
+
+/*--------------------------------------------------*/
 
 .home__container {
     /* border: 2px solid yellow; */
@@ -313,7 +323,7 @@
     /* justify-self: center; */
     position: absolute;
     font-size: 1.6rem;
-    top: calc(9% + 2.4rem);
+    top: calc(7% + 2.6rem);
     left: calc(50% + 35rem);
     width: 4rem;
     height: 4rem;
@@ -519,6 +529,6 @@ input:hover:checked+.slider_nav:before {
 
 @media (max-width: 375px) {
     .switch {
-        left: calc(40% + 43%);
+        left: calc(40% + 43.4%);
     }
 }

@@ -65,7 +65,7 @@ const Career = () => {
                         </div>
                         <a href={fullstack} target='_blank' className='academlo_card_title'><h3>FULL STACK DEVELOPER </h3></a>
                         <div className='academlo_card_container_button'>
-                            <button className='academlo_card_button' onClick={() => handleTap(!open)}>
+                            <button className={`academlo_card_button ${open ? 'open': 'close'}` } onClick={() => handleTap(!open)}>
                                 <img src="/src/assets/img/arrow-down-circle.svg" alt="drop-down-arrow" />
                             </button>
                         </div>
