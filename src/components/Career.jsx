@@ -6,7 +6,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { platzi, academlo, university } from '../utils/about.js'
-
+import academloLogo from '/src/assets/img/academlo_logo.jpg'
+import arrowDownIcon from '/src/assets/img/arrow-down-circle.svg'
+import logoUdec from '/src/assets/img/logo_udec.png'
 
 
 const Career = () => {
@@ -61,12 +63,12 @@ const Career = () => {
 
                     <div className='academlo_card'>
                         <div className="academlo_card_logo">
-                            <img src="/src/assets/img/academlo_logo.jpg" alt="logo-academlo" />
+                            <img src={academloLogo} alt="logo-academlo" />
                         </div>
                         <a href={fullstack} target='_blank' className='academlo_card_title'><h3>FULL STACK DEVELOPER </h3></a>
                         <div className='academlo_card_container_button'>
-                            <button className={`academlo_card_button ${open ? 'open': 'close'}` } onClick={() => handleTap(!open)}>
-                                <img src="/src/assets/img/arrow-down-circle.svg" alt="drop-down-arrow" />
+                            <button className={`academlo_card_button ${open ? 'open_window': 'close_window'}`} onClick={() => handleTap(!open)}>
+                                <img src={arrowDownIcon} alt="drop-down-arrow" />
                             </button>
                         </div>
                     </div>
@@ -118,7 +120,7 @@ const Career = () => {
             <div className="university_card_container">
                 <div className="university_card">
                     <div className='university_logo'>
-                        <img src="/src/assets/img/logo_udec.png" alt="logo-udec" />
+                        <img src={logoUdec} alt="logo-udec" />
                     </div>
                     <ul className='university_list' >
                         <li> <span>Academic program:</span> {university.academic_program}</li>

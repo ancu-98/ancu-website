@@ -33,7 +33,7 @@ const SetUpMenu = () => {
                     <header className='box__header' >
                         <NavBar handleTab={handleTab} />
                     </header>
-                    
+
                     <div className='main__container'>
                         <div className={show === 1 ? 'home__container' : 'inactive'}>
                             <Home />

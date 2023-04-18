@@ -131,7 +131,7 @@
     transition: transform 0.6s ease;
 }
 
-.academlo_card_button.open img {
+.academlo_card_button.open_window img {
     transform: rotate(180deg);
 }
 

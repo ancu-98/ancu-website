@@ -3,6 +3,11 @@ import AboutMe from './AboutMe'
 import Career from './Career'
 import Skills from './Skills'
 import './styles/about.css'
+import imgProfile from '/src/assets/img/profile-img.svg'
+import imgLocation from '/src/assets/img/location.svg'
+import imgColombia from '/src/assets/img/colombia.svg'
+import imgLinkedin from '/src/assets/img/linkedin.svg'
+import imgCurriculum from '/src/assets/img/address-card.svg'
 
 const About = () => {
 
@@ -20,14 +25,14 @@ const About = () => {
 
                 <div className='about_main'>
                     <div className='img_main hvr-outline-out'>
-                        <img src="/src/assets/img/profile-img.svg" alt="img-profile" />
+                        <img src={imgProfile} alt="img-profile" />
                     </div>
 
                     <aside>
                         <div className='about-location'>
-                            <img src="/src/assets/img/location.svg" alt="location-icon" />
+                            <img src={imgLocation} alt="location-icon" />
                             <span>COL</span>
-                            <img src="/src/assets/img/colombia.svg" alt="colombia-icon" />
+                            <img src={imgColombia} alt="colombia-icon" />
                         </div>
                         <h1>Sebastian Bernal</h1>
                         <p>Hi, I'm Sebastian Bernal and I'm a FullStack Developer </p>
@@ -36,11 +41,11 @@ const About = () => {
                     <div className="about_buttons">
                         <button>
                             <a href={linkedIn} target='_blank'>
-                                <img src="/src/assets/img/linkedin.svg" alt="linkedin-icon" />
+                                <img src={imgLinkedin} alt="linkedin-icon" />
                             </a>
                         </button>
                         <button>
-                            <img src="/src/assets/img/address-card.svg" alt="curriculum-icon" />
+                            <img src={imgCurriculum} alt="curriculum-icon" />
                         </button>
                     </div>
                 </div>

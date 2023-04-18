@@ -2,6 +2,10 @@ import React, { useRef } from 'react'
 import './styles/home.css'
 import Typed from 'typed.js'
 import { useEffect } from 'react';
+import githubIcon from '/src/assets/img/github1.svg'
+import playIcon from '/src/assets/img/play.svg'
+import zapIcon from '/src/assets/img/zap.svg'
+import gamepadIcon from '/src/assets/img/gamepad.svg'
 
 const Home = () => {
 
@@ -9,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+            strings: ['Bienvenido a ancu98 website', 'Gracias por visitar este sitio'],
             startDelay: 300,
             typeSpeed: 30,
             backDelay: 150,
@@ -21,8 +25,8 @@ const Home = () => {
 
         return () => {
             // Destroy Typed instance during cleanup to stop animation
-             typed.destroy();
-         };
+            typed.destroy();
+        };
     });
 
     return (
@@ -34,7 +38,7 @@ const Home = () => {
                         <button className="btn"></button>
                         <button className="btn"></button>
                     </div>
-                    <p className="user">ancu_98 website</p>
+                    <p className="user"> Welcome window </p>
                 </div>
                 <div className="terminal_body">
                     <div className="terminal_promt">
@@ -50,12 +54,12 @@ const Home = () => {
             <div className='button_scene'>
                 <div className='cube'>
                     <div className='side top'>
-                        <img className='icon' src="/src/assets/img/github1.svg" alt="github-icon" />
-                        <img className='icon' src="/src/assets/img/play.svg" alt="play-icon" />
-                        <img className='icon' src="/src/assets/img/zap.svg" alt="zap-icon" />
+                        <img className='icon' src={githubIcon} alt="github-icon" />
+                        <img className='icon' src={playIcon} alt="play-icon" />
+                        <img className='icon' src={zapIcon} alt="zap-icon" />
                     </div>
                     <div className='side front'>
-                        <img src="/src/assets/img/gamepad.svg" alt="gamepad-icon"/>
+                        <img src={gamepadIcon} alt="gamepad-icon"/>
                         <span>Share me</span>
                     </div>
                 </div>
