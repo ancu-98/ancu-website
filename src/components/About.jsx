@@ -35,17 +35,17 @@ const About = () => {
                             <img src={imgColombia} alt="colombia-icon" />
                         </div>
                         <h1>Sebastian Bernal</h1>
-                        <p>Hi, I'm Sebastian Bernal and I'm a FullStack Developer </p>
+                        <p>Hi, I'm Sebastian Bernal - Backend Developer </p>
                     </aside>
 
                     <div className="about_buttons">
                         <button>
                             <a href={linkedIn} target='_blank'>
-                                <img src={imgLinkedin} alt="linkedin-icon" />
+                                <img src={imgLinkedin} alt="linkedin-icon"/>
                             </a>
                         </button>
                         <button>
-                            <img src={imgCurriculum} alt="curriculum-icon" />
+                            <img src={imgCurriculum} alt="curriculum-icon"/>
                         </button>
                     </div>
                 </div>

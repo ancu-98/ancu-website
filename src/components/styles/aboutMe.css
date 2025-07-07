@@ -1,0 +1,17 @@
+.about_me_container {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about_me {
+  max-width: 800px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about_me p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
