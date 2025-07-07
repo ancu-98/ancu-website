@@ -14,7 +14,7 @@ const allProyects = [
         documentation_link: '',
         type: 'Frontend',
         title_description: 'Descripción proyecto',
-        description: 'El campo de búsqueda (input controlado) sirve para mostrar una lista sugerida de ubicaciones, cada que el usuario escribe una letra o el ID (1-126) de la ubicación que muestra: nombre, tipo, dimensión a la que pertenece y población del planeta.'
+        description: 'El campo de búsqueda (input controlado) sirve para mostrar una lista sugerida de ubicaciones, cada que el usuario escribe una letra o el ID (1-126) de la ubicación que muestra: nombre, tipo, dimensión a la que pertenece y población del planeta. \n Tecnologías: React Router DOM, Redux, React, HTML, CSS, JavaScript.'
     },
     {
         id: 42,
@@ -26,7 +26,7 @@ const allProyects = [
         documentation_link: '',
         type: 'Frontend',
         title_description: 'Descripción proyecto',
-        description: 'La aplicación web cuenta con rutas protegidas, página de inicio y páginas específicas para mostrar todos los Pokémons disponibles por categoría y la información detallada de un Pokémon seleccionado.'
+        description: 'La aplicación web cuenta con rutas protegidas, página de inicio y páginas específicas para mostrar todos los Pokémons disponibles por categoría y la información detallada de un Pokémon seleccionado. \n Tecnologías: React Router DOM, Redux, React, HTML, CSS, JavaScript '
     },
     {
         id: 43,
