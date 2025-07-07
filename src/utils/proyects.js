@@ -13,8 +13,8 @@ const allProyects = [
         deploy_link: 'https://rick-and-morty-app-3.netlify.app/',
         documentation_link: '',
         type: 'Frontend',
-        title_description: 'titulo de descripcion',
-        description: 'Descripcion del proyecto'
+        title_description: 'Descripción proyecto',
+        description: 'El campo de búsqueda (input controlado) sirve para mostrar una lista sugerida de ubicaciones, cada que el usuario escribe una letra o el ID (1-126) de la ubicación que muestra: nombre, tipo, dimensión a la que pertenece y población del planeta.'
     },
     {
         id: 42,
@@ -25,8 +25,8 @@ const allProyects = [
         deploy_link: 'https://pokedex-api-5.netlify.app/',
         documentation_link: '',
         type: 'Frontend',
-        title_description: '',
-        description: ''
+        title_description: 'Descripción proyecto',
+        description: 'La aplicación web cuenta con rutas protegidas, página de inicio y páginas específicas para mostrar todos los Pokémons disponibles por categoría y la información detallada de un Pokémon seleccionado.'
     },
     {
         id: 43,
