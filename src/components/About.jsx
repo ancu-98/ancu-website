@@ -17,7 +17,7 @@ const About = () => {
         setShow(e)
     }
 
-    const linkedIn = 'https://www.linkedin.com/in/sebastian-bernal-b808a9255/';
+    const linkedIn = 'www.linkedin.com/in/ancu98';
 
     return (
         <div className="about_container">
