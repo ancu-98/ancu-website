@@ -13,8 +13,10 @@ const allProyects = [
         deploy_link: 'https://rick-and-morty-app-3.netlify.app/',
         documentation_link: '',
         type: 'Frontend',
-        title_description: 'Descripción proyecto',
-        description: 'El campo de búsqueda (input controlado) sirve para mostrar una lista sugerida de ubicaciones, cada que el usuario escribe una letra o el ID (1-126) de la ubicación que muestra: nombre, tipo, dimensión a la que pertenece y población del planeta. \n Tecnologías: React Router DOM, Redux, React, HTML, CSS, JavaScript.'
+        title_description: 'Proyect Description',
+        description: 'The search field (controlled input) is used to display a suggested list of locations each time the user types a letter or the location ID (1-126). It shows: name, type, dimension it belongs to, and the planet’s population.',
+        technologies: 'Technologies: React Router DOM, Redux, React, HTML, CSS, JavaScript.'
+
     },
     {
         id: 42,
@@ -25,33 +27,34 @@ const allProyects = [
         deploy_link: 'https://pokedex-api-5.netlify.app/',
         documentation_link: '',
         type: 'Frontend',
-        title_description: 'Descripción proyecto',
-        description: 'La aplicación web cuenta con rutas protegidas, página de inicio y páginas específicas para mostrar todos los Pokémons disponibles por categoría y la información detallada de un Pokémon seleccionado. \n Tecnologías: React Router DOM, Redux, React, HTML, CSS, JavaScript '
+        title_description: 'Proyect Description',
+        description: 'The web application includes protected routes, a home page, and specific pages to display all available Pokémon by category, as well as detailed information for a selected Pokémon.',
+        technologies: 'Technologies: React Router DOM, Redux, React, HTML, CSS, JavaScript.'
     },
-    {
-        id: 43,
-        name_proyect: 'Weather App',
-        icon_proyect: '',
-        img_proyect: '',
-        github_link: 'https://github.com/ancu-98/weather-app',
-        deploy_link: 'https://weather-proyect.netlify.app/',
-        documentation_link: '',
-        type: 'Frontend',
-        title_description: '',
-        description: ''
-    },
-    {
-        id: 44,
-        name_proyect: 'Random Quote',
-        icon_proyect: '',
-        img_proyect: '',
-        github_link: 'https://github.com/ancu-98/entregable1-gen18',
-        deploy_link: 'https://my-first-react-site-1.netlify.app/',
-        documentation_link: '',
-        type: 'Frontend',
-        title_description: '',
-        description: ''
-    },
+    // {
+    //     id: 43,
+    //     name_proyect: 'Weather App',
+    //     icon_proyect: '',
+    //     img_proyect: '',
+    //     github_link: 'https://github.com/ancu-98/weather-app',
+    //     deploy_link: 'https://weather-proyect.netlify.app/',
+    //     documentation_link: '',
+    //     type: 'Frontend',
+    //     title_description: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 44,
+    //     name_proyect: 'Random Quote',
+    //     icon_proyect: '',
+    //     img_proyect: '',
+    //     github_link: 'https://github.com/ancu-98/entregable1-gen18',
+    //     deploy_link: 'https://my-first-react-site-1.netlify.app/',
+    //     documentation_link: '',
+    //     type: 'Frontend',
+    //     title_description: '',
+    //     description: ''
+    // },
     // {
     //     id: 45,
     //     name_proyect: 'Chat API',

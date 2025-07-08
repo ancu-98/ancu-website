@@ -9,7 +9,11 @@ import reduxIcon from '/src/assets/img/redux_original_logo_icon.svg'
 import nodeIcon from '/src/assets/img/node_icon.svg'
 import postgresql from '/src/assets/img/postgresql_logo_icon.svg'
 import git from '/src/assets/img/git_icon.svg'
-
+import sequelize from '/src/assets/img/sequelize.svg'
+import python from '/src/assets/img/python.svg'
+import fastapi from '/src/assets/img/FastAPI.svg'
+import django from '/src/assets/img/djangoproject.svg'
+import mongodb from '/src/assets/img/mongodb_original_logo_icon_146424.svg'
 
 const platzi = [
     {
@@ -84,21 +88,21 @@ const academlo = [
     {
         id: 12,
         image: fundamentosLogo,
-        curso: 'Fundamentos de Desarrollo Web',
+        curso: 'Web Development Fundamentals',
         description: 'The student obtained the necessary skills to correctly develop the visual part of a responsive website without using libraries/frameworks, as well as adding dynamic content with javascript, working collaboratively with git.',
         certificate_link: 'https://certificates.academlo.com/en/verify/74170408084694'
     },
     {
         id: 13,
         image: reactLogo,
-        curso: 'Desarrollo de Aplicaciones Web con React',
+        curso: 'Web Application Development with React',
         description: 'The student learned to create web applications with React JS, achieving great user interaction using previous knowledge of HTML, CSS and Javascript.',
         certificate_link: 'https://certificates.academlo.com/en/verify/55739408950709'
     },
     {
         id: 14,
         image: nodeLogo,
-        curso: 'Backend con Node',
+        curso: 'Backend whit NodeJS',
         description: 'The student learned how to build a server-side application with Node and Express from 0 to deployment on a server. They will have the ability to build a Rest API using a relational database, user authentication, security against XSS and CSRF attacks, validate the data received by the server and build custom middlewares with Express.',
         certificate_link: 'https://certificates.academlo.com/en/verify/64940983054018'
     }
@@ -111,7 +115,7 @@ const university = {
     type_training: 'college degree' ,
     metodology: 'On-site',
     duration: '10 semesters',
-    semester_location: '5 semester'
+    semester_location: '9 semester'
 }
 
 const skills = [
@@ -132,7 +136,7 @@ const skills = [
     },
     {
         id:18 ,
-        skill: 'React',
+        skill: 'ReactJS',
         img: reactIcon
     },
     {
@@ -147,11 +151,36 @@ const skills = [
     },
     {
         id:21 ,
+        skill: 'Sequelize',
+        img: sequelize
+    },
+    {
+        id:22 ,
+        skill: 'Python',
+        img: python
+    },
+    {
+        id:23 ,
+        skill: 'FastAPI',
+        img: fastapi
+    },
+    {
+        id:24 ,
+        skill: 'Django',
+        img: django
+    },
+    {
+        id:24 ,
         skill: 'PostgreSQL',
         img: postgresql
     },
     {
-        id:22 ,
+        id:25 ,
+        skill: 'MongoDB',
+        img: mongodb
+    },
+    {
+        id:26 ,
         skill: 'Git',
         img: git
     }
@@ -161,19 +190,21 @@ const frontedSkills = {
     skill1: 'Responsive Desing',
     skill2: 'HTML, CSS y JavaScript',
     skill3: 'Redux',
-    skill4: "Custom Hooks y Axios - consumo de API's"
+    skill4: "Custom Hooks y Axios - consumo de API REST",
+    skill5: 'Tailwind CSS'
 }
 
 const backendSkills = {
-    skill1: 'Programación Orientada a Objetos POO' ,
-    skill2: 'Programación Funcional',
-    skill3: 'Arquitectura MVC',
-    skill4: 'Relaciones en bases de datos (Template Engines)',
-    skill5: 'Express',
-    skill6: 'Sequilize ORM',
-    skill7: 'JSON Web Tokens(JWT)',
-    skill8: 'API Rest con Node y Express (seguridad y documentación)'
-}
+  skill1: 'Programming Fundamentals',
+  skill2: 'Software Architectures',
+  skill3: 'Relational Databases (PostgreSQL) and Non-relational Databases (MongoDB)',
+  skill4: 'REST APIs with NodeJS, Express, and Sequelize ORM',
+  skill5: 'REST APIs with Python, FastAPI, and Django ORM',
+  skill6: 'Authentication with JSON Web Tokens (JWT)',
+  skill7: 'Project Documentation with Swagger (OpenAPI)',
+  skill8: 'Unit Testing',
+  skill9: 'Cloud Computing: Amazon Web Services (AWS)',
+};
 
 export {
     platzi,

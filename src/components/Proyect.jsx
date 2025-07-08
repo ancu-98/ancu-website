@@ -4,7 +4,7 @@ import gitHubIcon from '/src/assets/img/github.svg'
 import deployIcon from '/src/assets/img/briefcase-upload.svg'
 import documentationIcon from '/src/assets/img/card-text.svg'
 
-const Proyect = ({ nameProyect, iconProyect, imgProyect, gitHubLink, deployLink, documentationLink, type, titleDescription, description }) => {
+const Proyect = ({ nameProyect, iconProyect, imgProyect, gitHubLink, deployLink, documentationLink, type, titleDescription, description, technologies }) => {
     return (
         <div className="card">
             <div className='proyect-card'>
@@ -52,6 +52,7 @@ const Proyect = ({ nameProyect, iconProyect, imgProyect, gitHubLink, deployLink,
             <div className='general'>
                 <h1>{titleDescription}</h1>
                 <p>{description}</p>
+                <p>{technologies}</p>
                 <span className='more'>Hover the card for more info</span>
             </div>
         </div>

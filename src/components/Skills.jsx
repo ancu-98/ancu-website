@@ -39,6 +39,7 @@ const Skills = () => {
                     <li>{backendSkills.skill6}</li>
                     <li>{backendSkills.skill7}</li>
                     <li>{backendSkills.skill8}</li>
+                    <li>{backendSkills.skill9}</li>
                 </ul>
             </div>
         </div>
