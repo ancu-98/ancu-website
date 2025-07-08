@@ -20,7 +20,7 @@ const Proyects = () => {
               type={cardProyect.type}
               titleDescription={cardProyect.title_description}
               description={cardProyect.description}
-              tecnologies={cardProyect.technologies}
+              technologies={cardProyect.technologies}
             />
           </div>
         ))

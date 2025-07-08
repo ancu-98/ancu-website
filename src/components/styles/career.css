@@ -5,6 +5,7 @@
     display: grid;
     grid-template-rows: 1fr 0.8fr 1fr;
     place-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .academlo_container {

@@ -30,7 +30,7 @@ const allProyects = [
         title_description: 'Proyect Description',
         description: 'The web application includes protected routes, a home page, and specific pages to display all available Pokémon by category, as well as detailed information for a selected Pokémon.',
         technologies: 'Technologies: React Router DOM, Redux, React, HTML, CSS, JavaScript.'
-    },
+    }
     // {
     //     id: 43,
     //     name_proyect: 'Weather App',
